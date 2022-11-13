@@ -1,0 +1,32 @@
+.slider{
+    width: 100%;
+}
+
+.div-slide img{
+    width: 100vw;
+    height: 70vh;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.info{
+    margin: 3rem 0;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info1{
+    display: flex;
+    padding: 2rem 0;
+}
+
+.info1 h3{
+    padding: .7rem 0;
+}
+
+.icon{
+    margin: auto 1.3rem;
+}
