@@ -8,3 +8,12 @@ padding: 0;
 margin: 0;
 overflow-x: inherit;
 }
+
+/* === CARD ADD CART === */
+
+.alertAdd{
+    display: flex;
+    right: 1rem;
+    bottom: 1rem;
+    position: fixed;
+  }

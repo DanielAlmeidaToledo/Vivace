@@ -2,14 +2,18 @@ import NavBar from './components/NavBar'
 import Filter from './components/Filter'
 import Slide from './components/Slide'
 import Product from './components/Product'
+import Footer from "./components/Footer";
 
-import { useState } from 'react'
+import Alert from "@mui/material/Alert";
 
-import './App.css'
+import { useState } from "react";
+
+import "./App.css";
 
 function App() {
   const [cartShop, setCartShop] = useState([]);
   const [countCart, setCountCart] = useState(cartShop.length);
+  const [open, setOpen] = useState(false);
 
   /* Objeto com os produtos da loja */
   const product = [
@@ -78,21 +82,21 @@ function App() {
     },
     {
       id: 10,
-      name: "Malhado Listrado ocasional Camiseta",
+      name: "Camiseta Listrado ocasional ",
       price: 29.0,
       image:
         "https://img.ltwebstatic.com/images3_pi/2022/04/06/1649236883a937b6e453c8329f2ad36e4511abfde9_thumbnail_600x.webp",
     },
     {
       id: 11,
-      name: "Guarnição de Alface Borboleta ocasional Camiseta",
+      name: "Camiseta de Alface Borboleta ocasional",
       price: 29.0,
       image:
         "https://img.ltwebstatic.com/images3_pi/2022/04/19/1650333066429c7fdb0e727a237d5e486149b8a124_thumbnail_600x.webp",
     },
     {
       id: 12,
-      name: " Guarnição de Alface Simples ocasional Camiseta",
+      name: " Camiseta de Alface Simples ocasional",
       price: 29.0,
       image:
         "https://img.ltwebstatic.com/images3_pi/2022/03/03/1646278057ebc92663cf841d3a66948e312d8a7f5f_thumbnail_600x.webp",
@@ -128,6 +132,14 @@ function App() {
     }
   }
 
+  /* Alerta de adição de itens no carrinho */
+  const showAlert = () => {
+    setOpen(true);
+    setTimeout(() => {
+      setOpen(false);
+    }, 3000);
+  };
+
   return (
     <div className="App">
       <NavBar
@@ -137,7 +149,13 @@ function App() {
       />
       <Filter />
       <Slide />
-      <Product product={product} addItem={addItem} />
+      <Product product={product} addItem={addItem} showAlert={showAlert} />
+      {open && (
+        <Alert className="alertAdd" variant="filled" severity="success">
+          Produto adicionado no carrinho
+        </Alert>
+      )}
+      <Footer />
     </div>
   );
 }
