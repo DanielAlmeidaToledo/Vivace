@@ -48,7 +48,7 @@ const NavBar = ({ cartShop, quantidade: countCart, removeItem }) => {
                   ) : (
                     <div>
                       {cartShop.map((item) => {
-                        const { name, price, image, count } = item;
+                        const { name, price, size, image, count } = item;
                         totalPrice += item.price;
                         return (
                           <div key={item.image} className="itemCart">

@@ -139,6 +139,12 @@
 .infoCart{
     text-align: start;
     margin: 0 .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.infoCart h4{
+    max-width: 5rem;
 }
 
 .infoPrice{

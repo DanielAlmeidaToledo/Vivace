@@ -1,0 +1,78 @@
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogContent{
+    width: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.dialogImg{
+    width: 21rem;
+    height: 27rem;
+}
+
+.information{
+    display: flexbox;
+    float: right;
+    height: 27rem;
+    width: 16rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.information h3{
+    margin: 3rem 0 0 0;
+    color: #000;
+    font-size: 1.7rem;
+}
+
+.information p{
+    font-size: 1.5rem;
+    color: black;
+    margin: 1rem 0;
+}
+
+.addCartModal{
+    font-size: 1.2rem;
+    padding: .5rem .8rem;
+    background: #FF99C8;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    border-radius: .2rem;
+    border: none;
+    filter: .5s;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto 0;
+}
+
+.addCartModal:hover{
+    filter: saturate(1.3);
+}
+
+.dialogClose{
+    position: absolute;
+    color: #FF99C8;
+    background-color: #e3e3e3;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .3s;
+    margin: -3vh auto 0 90vh;
+}
+
+.dialogClose:hover{
+    background-color: #FF99C8;
+    color: #fff;
+}
