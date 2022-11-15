@@ -8,8 +8,136 @@ import Modal from "./components/Modal";
 import Alert from "@mui/material/Alert";
 
 import { useState } from "react";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 import "./App.css";
+
+/* Todos os produtos */
+const products = [
+  {
+    id: 1,
+    name: "blusa 1",
+    price: 49.0,
+    size: ["P", "M", "G"],
+    categories: ["hot"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2022/01/05/1641367718339de4f594d2bfe7dcf270b96dac6d73_thumbnail_600x.webp",
+  },
+  {
+    id: 2,
+    name: "blusa 2",
+    price: 39.0,
+    size: ["P", "M", "G"],
+    categories: ["hot"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2020/12/07/1607328597493fa40dc42c2a6462d3c92d7eec84e0_thumbnail_600x.webp",
+  },
+  {
+    id: 3,
+    name: "blusa 3",
+    price: 55.0,
+    size: ["P", "M", "G"],
+    categories: ["hot"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621259574b29fb7791e62f2bbdf3c2ebf16f4cb33_thumbnail_600x.webp",
+  },
+  {
+    id: 4,
+    name: "blusa 4",
+    price: 29.9,
+    size: ["P", "M", "G"],
+    categories: ["hot"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2021/01/25/1611564678c060bb9869c797fde01577c945eb0cc8_thumbnail_600x.webp",
+  },
+  {
+    id: 5,
+    name: "blusa 5",
+    price: 49.0,
+    size: ["P", "M", "G"],
+    categories: ["hot"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2022/05/18/165286966766696d9c18f155c23c847fa8a817cdfd_thumbnail_600x.webp",
+  },
+  {
+    id: 6,
+    name: "blusa 6",
+    price: 49.0,
+    size: ["P", "M", "G"],
+    categories: ["hot"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2021/12/02/163842941336b65217db5a1acc6d27815e30c915d7_thumbnail_600x.webp",
+  },
+  {
+    id: 7,
+    name: "Top de malha - Simples ocasional 1",
+    price: 29.0,
+    size: ["P", "M", "G"],
+    categories: ["promo"],
+    image:
+      "https://img.ltwebstatic.com/gspCenter/goodsImage/2022/10/16/8370285060_1030691/9EA50E6BEB8682979C60E0A09769C361_thumbnail_600x.jpg",
+  },
+  {
+    id: 8,
+    name: "Top de malha - Simples ocasional 2",
+    price: 29.0,
+    size: ["P", "M", "G"],
+    categories: ["promo"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2022/09/14/166314468772e894ee2e231d39c69a77084276bc4c_thumbnail_600x.webp",
+  },
+  {
+    id: 9,
+    name: "Top de malha - Simples ocasional 3",
+    price: 29.0,
+    size: ["P", "M", "G"],
+    categories: ["promo"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2021/11/16/16370480499bd450418598c5ad275f31b81847225b_thumbnail_600x.webp",
+  },
+  {
+    id: 10,
+    name: "Camiseta Listrado ocasional ",
+    price: 29.0,
+    size: ["P", "M", "G"],
+    categories: ["releases"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2022/04/06/1649236883a937b6e453c8329f2ad36e4511abfde9_thumbnail_600x.webp",
+  },
+  {
+    id: 11,
+    name: "Camiseta de Alface Borboleta ocasional",
+    price: 29.0,
+    size: ["P", "M", "G"],
+    categories: ["releases"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2022/04/19/1650333066429c7fdb0e727a237d5e486149b8a124_thumbnail_600x.webp",
+  },
+  {
+    id: 12,
+    name: " Camiseta de Alface Simples ocasional",
+    price: 29.0,
+    size: ["P", "M", "G"],
+    categories: ["releases"],
+    image:
+      "https://img.ltwebstatic.com/images3_pi/2022/03/03/1646278057ebc92663cf841d3a66948e312d8a7f5f_thumbnail_600x.webp",
+  },
+];
+
+/* Novidades */
+const hotProducts = products.filter((product) =>
+  product.categories.includes("hot")
+);
+
+/* Lançamentos */
+const releaseProducts = products.filter((product) =>
+  product.categories.includes("releases")
+);
+
+/* Promoções */
+const promoProducts = products.filter((product) =>
+  product.categories.includes("promo")
+);
 
 function App() {
   const [cartShop, setCartShop] = useState([]);
@@ -17,106 +145,6 @@ function App() {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [prod, setProd] = useState();
-
-  /* Objeto com os produtos da loja */
-  const product = [
-    {
-      id: 1,
-      name: "blusa 1",
-      price: 49.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2022/01/05/1641367718339de4f594d2bfe7dcf270b96dac6d73_thumbnail_600x.webp",
-    },
-    {
-      id: 2,
-      name: "blusa 2",
-      price: 39.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2020/12/07/1607328597493fa40dc42c2a6462d3c92d7eec84e0_thumbnail_600x.webp",
-    },
-    {
-      id: 3,
-      name: "blusa 3",
-      price: 55.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621259574b29fb7791e62f2bbdf3c2ebf16f4cb33_thumbnail_600x.webp",
-    },
-    {
-      id: 4,
-      name: "blusa 4",
-      price: 29.9,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2021/01/25/1611564678c060bb9869c797fde01577c945eb0cc8_thumbnail_600x.webp",
-    },
-    {
-      id: 5,
-      name: "blusa 5",
-      price: 49.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2022/05/18/165286966766696d9c18f155c23c847fa8a817cdfd_thumbnail_600x.webp",
-    },
-    {
-      id: 6,
-      name: "blusa 6",
-      price: 49.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2021/12/02/163842941336b65217db5a1acc6d27815e30c915d7_thumbnail_600x.webp",
-    },
-    {
-      id: 7,
-      name: "Top de malha - Simples ocasional 1",
-      price: 29.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/gspCenter/goodsImage/2022/10/16/8370285060_1030691/9EA50E6BEB8682979C60E0A09769C361_thumbnail_600x.jpg",
-    },
-    {
-      id: 8,
-      name: "Top de malha - Simples ocasional 2",
-      price: 29.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2022/09/14/166314468772e894ee2e231d39c69a77084276bc4c_thumbnail_600x.webp",
-    },
-    {
-      id: 9,
-      name: "Top de malha - Simples ocasional 3",
-      price: 29.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2021/11/16/16370480499bd450418598c5ad275f31b81847225b_thumbnail_600x.webp",
-    },
-    {
-      id: 10,
-      name: "Camiseta Listrado ocasional ",
-      price: 29.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2022/04/06/1649236883a937b6e453c8329f2ad36e4511abfde9_thumbnail_600x.webp",
-    },
-    {
-      id: 11,
-      name: "Camiseta de Alface Borboleta ocasional",
-      price: 29.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2022/04/19/1650333066429c7fdb0e727a237d5e486149b8a124_thumbnail_600x.webp",
-    },
-    {
-      id: 12,
-      name: " Camiseta de Alface Simples ocasional",
-      price: 29.0,
-      size: ["P", "M", "G"],
-      image:
-        "https://img.ltwebstatic.com/images3_pi/2022/03/03/1646278057ebc92663cf841d3a66948e312d8a7f5f_thumbnail_600x.webp",
-    },
-  ];
 
   /* Adiciona item no carrinho de compras */
   function addItem(item) {
@@ -133,7 +161,7 @@ function App() {
       });
     } else {
       cartShop[index].count++;
-      cartShop[index].price += item.price;
+      cartShop[index].price += item.price / (cartShop[index].count - 1);
     }
   }
 
@@ -171,30 +199,96 @@ function App() {
         cartShop={cartShop}
         quantidade={countCart}
         removeItem={removeItem}
-      />
-      <Filter />
-      <Slide />
-      <Product
-        product={product}
         addItem={addItem}
-        showAlert={showAlert}
-        handleClickOpen={handleClickOpen}
       />
-      {open && (
-        <Alert className="alertAdd" variant="filled" severity="success">
-          Produto adicionado no carrinho
-        </Alert>
-      )}
-      <Footer />
-      {open1 && (
-        <Modal
-          item={prod}
-          open={open1}
-          handleClose={handleClose}
-          addItem={addItem}
-          showAlert={showAlert}
-        />
-      )}
+      <BrowserRouter>
+        <div className="filter">
+          <Link className="filterLink" to="/">
+            Todos os Produtos
+          </Link>
+          <Link className="filterLink" to="/lancamentos">
+            Lançamentos
+          </Link>
+          <Link className="filterLink" to="/mais-vendidos">
+            Mais Vendidos
+          </Link>
+          <Link className="filterLink" to="/promocoes">
+            Promoções
+          </Link>
+        </div>
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Slide />
+                <Product
+                  products={products}
+                  addItem={addItem}
+                  showAlert={showAlert}
+                  handleClickOpen={handleClickOpen}
+                  title="Todos os Produtos"
+                />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/lancamentos"
+            element={
+              <Product
+                products={hotProducts}
+                addItem={addItem}
+                showAlert={showAlert}
+                handleClickOpen={handleClickOpen}
+                title="Lançamentos"
+              />
+            }
+          ></Route>
+          <Route
+            path="/mais-vendidos"
+            element={
+              <Product
+                products={releaseProducts}
+                addItem={addItem}
+                showAlert={showAlert}
+                handleClickOpen={handleClickOpen}
+                title="Mais Vendidos"
+              />
+            }
+          ></Route>
+          <Route
+            path="/promocoes"
+            element={
+              <Product
+                products={promoProducts}
+                addItem={addItem}
+                showAlert={showAlert}
+                handleClickOpen={handleClickOpen}
+                title="Promoções"
+              />
+            }
+          ></Route>
+        </Routes>
+
+        {open && (
+          <Alert className="alertAdd" variant="filled" severity="success">
+            Produto adicionado no carrinho
+          </Alert>
+        )}
+
+        <Footer />
+
+        {open1 && (
+          <Modal
+            item={prod}
+            open={open1}
+            handleClose={handleClose}
+            addItem={addItem}
+            showAlert={showAlert}
+          />
+        )}
+      </BrowserRouter>
     </div>
   );
 }

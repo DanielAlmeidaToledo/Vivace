@@ -139,12 +139,15 @@
 .infoCart{
     text-align: start;
     margin: 0 .5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .infoCart h4{
-    max-width: 5rem;
+    width: 13ch;
+    font-size: 1rem;
+    max-width: 13ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .infoPrice{
@@ -155,6 +158,7 @@
 
 .infoQuant{
     font-size: .8rem;
+    padding-bottom: 1rem;
 }
 
 .itemCart button{
@@ -162,13 +166,21 @@
     border: none;
 }
 
-.removeItem{
-    cursor: pointer;
-    margin: 0 0 0 3rem;
-    transition: .2s;
+.iconsBtn{
+    width: 2rem;
+    height: 5rem;
+    position: absolute;
+    display: flexbox;
+    margin: 0 0 0 70%;
 }
 
-.removeItem:hover{
+.iconItem{
+    cursor: pointer;
+    transition: .2s;
+    margin: .3rem 0;
+}
+
+.iconItem:hover{
     color: #FF99C8;
 }
 

@@ -1,3 +1,9 @@
+.titleProducts{
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0 0 0;
+}
+
 .items{
     width: 100%;
     display: flex;

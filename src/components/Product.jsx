@@ -2,10 +2,11 @@ import './Product.css'
 
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 
-const Product = ({ product, addItem, showAlert, handleClickOpen }) => {
+const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
   return (
     <main className="items">
-      {product.map((item) => {
+      <h2 className="titleProducts">{title}</h2>
+      {products.map((item) => {
         const { name, price, size, image } = item;
         return (
           <div className="item" key={name}>

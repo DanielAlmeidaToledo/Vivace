@@ -1,19 +1,21 @@
 import { FaSearch } from 'react-icons/fa'
 import { MdShoppingCart } from 'react-icons/md'
 import { AiOutlineClose } from 'react-icons/ai'
-import { BsTrash } from 'react-icons/bs'
-import * as Popover from '@radix-ui/react-popover';
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
+import * as Popover from "@radix-ui/react-popover";
 
 import logo from "../media/logo1.png";
 
 import "./NavBar.css";
 
-const NavBar = ({ cartShop, quantidade: countCart, removeItem }) => {
+const NavBar = ({ cartShop, quantidade: countCart, removeItem, addItem }) => {
   var totalPrice = 0;
 
   return (
     <header className="NavBar">
-      <img src={logo} alt="Logo Vivace" className="logo" />
+      <a href="/">
+        <img src={logo} alt="Logo Vivace" className="logo" />
+      </a>
       <ul className="nav-ul">
         <li className="nav-li">
           <input
@@ -25,7 +27,7 @@ const NavBar = ({ cartShop, quantidade: countCart, removeItem }) => {
           <FaSearch className="icon-search" />
         </li>
         <li className="nav-li">
-          <a href="">Produtos</a>
+          <a href="/">Produtos</a>
         </li>
 
         <li className="nav-li">
@@ -65,9 +67,20 @@ const NavBar = ({ cartShop, quantidade: countCart, removeItem }) => {
                                 Quantidade: {item.count}
                               </p>
                             </div>
-                            <button onClick={() => removeItem(item)}>
-                              <BsTrash className="removeItem" size={20} />
-                            </button>
+                            <div className="iconsBtn">
+                              <button onClick={() => addItem(item)}>
+                                <AiOutlinePlusCircle
+                                  className="iconItem"
+                                  size={20}
+                                />
+                              </button>
+                              <button onClick={() => removeItem(item)}>
+                                <AiOutlineMinusCircle
+                                  className="iconItem"
+                                  size={20}
+                                />
+                              </button>
+                            </div>
                           </div>
                         );
                       })}
