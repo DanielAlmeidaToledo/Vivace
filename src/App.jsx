@@ -1,7 +1,6 @@
-import NavBar from './components/NavBar'
-import Filter from './components/Filter'
-import Slide from './components/Slide'
-import Product from './components/Product'
+import NavBar from "./components/NavBar";
+import Slide from "./components/Slide";
+import Product from "./components/Product";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 
@@ -293,4 +292,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
