@@ -22,40 +22,52 @@ const Slide = () => {
     ];
 
     const infos = [
-        {title: "Pagamentos", sub: "Pix, Cartão de Débito e Crédito, Dinheiro.", icon: <MdOutlinePayments size={50} className='icon'/>},
-        {title: "Entrega em Boituva/SP", sub: "Levamos a sua encomenda até você.", icon: <TbTruckDelivery size={50} className='icon'/>},
-        {title: "Frete", sub: "O valor do frete varia conforme o seu bairro.", icon: <FaLaptopHouse size={50} className='icon'/>},
+      {
+        title: "Pagamentos",
+        sub: "Pix, Dinheiro e Depósitos.",
+        icon: <MdOutlinePayments size={50} className="icon" />,
+      },
+      {
+        title: "Entrega em Boituva/SP",
+        sub: "Levamos a sua encomenda até você.",
+        icon: <TbTruckDelivery size={50} className="icon" />,
+      },
+      {
+        title: "Frete",
+        sub: "O valor do frete varia conforme o seu bairro.",
+        icon: <FaLaptopHouse size={50} className="icon" />,
+      },
     ];
 
-  return (
-    <div className="slide">
+    return (
+      <div className="slide">
         <Slider {...settings} className="slider">
-            {imgSlides.map((item) => {
-                const {name , img} = item;
-                return(
-                    <div className="div-slide" key={item.name}>
-                        <img src={item.img} alt={item.name} />
-                    </div>
-                )
-            })}
+          {imgSlides.map((item) => {
+            const { name, img } = item;
+            return (
+              <div className="div-slide" key={item.name}>
+                <img src={item.img} alt={item.name} />
+              </div>
+            );
+          })}
         </Slider>
 
         <section className="info">
-            {infos.map((info) => {
-                const {title , sub , icon} = info;
-                return (
-                    <div className="info1" key={info.title}>
-                        {info.icon}
-                        <div>
-                            <h3>{info.title}</h3>
-                            <span>{info.sub}</span>
-                        </div>
-                    </div>
-                )
-            })}
+          {infos.map((info) => {
+            const { title, sub, icon } = info;
+            return (
+              <div className="info1" key={info.title}>
+                <div className="iconInfo">{info.icon}</div>
+                <div>
+                  <h3>{info.title}</h3>
+                  <span>{info.sub}</span>
+                </div>
+              </div>
+            );
+          })}
         </section>
-    </div>
-  )
+      </div>
+    );
 }
 
 export default Slide

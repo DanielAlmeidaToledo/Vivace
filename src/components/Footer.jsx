@@ -23,13 +23,13 @@ const Footer = () => {
         <div className="footer-2">
           <h2>Contato</h2>
           <div>
-            <a href="">
+            <a href="https://www.instagram.com/vivace.loja/" target={"_blank"}>
               <BsInstagram size={30} />
             </a>
-            <a href="">
+            <a href="https://wa.me/5515981813023" target={"_blank"}>
               <BsWhatsapp size={30} />
             </a>
-            <a href="">
+            <a href="mailto:vivace.contato01@gmail.com" target={"_blank"}>
               <MdOutlineMailOutline size={30} />
             </a>
           </div>
