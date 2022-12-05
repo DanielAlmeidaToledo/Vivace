@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Modal from "./components/Modal";
 
 import Alert from "@mui/material/Alert";
+import Hamburger from "hamburger-react";
 
 import { useState } from "react";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
@@ -15,111 +16,107 @@ import "./App.css";
 const products = [
   {
     id: 1,
-    name: "blusa 1",
+    name: "Body Rosa",
     price: 49.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2022/01/05/1641367718339de4f594d2bfe7dcf270b96dac6d73_thumbnail_600x.webp",
+    image: "src/media/roupas/bdChiclete.jpg",
   },
   {
     id: 2,
-    name: "blusa 2",
+    name: "Body Bege",
     price: 39.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2020/12/07/1607328597493fa40dc42c2a6462d3c92d7eec84e0_thumbnail_600x.webp",
+    image: "src/media/roupas/bdRosado.jpg",
   },
   {
     id: 3,
-    name: "blusa 3",
+    name: "Body Verde Esmeralda",
     price: 55.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2021/05/17/1621259574b29fb7791e62f2bbdf3c2ebf16f4cb33_thumbnail_600x.webp",
+    image: "src/media/roupas/bdVerde.jpg",
   },
   {
     id: 4,
-    name: "blusa 4",
+    name: "Cropped Cavado Preto",
     price: 29.9,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2021/01/25/1611564678c060bb9869c797fde01577c945eb0cc8_thumbnail_600x.webp",
+    image: "src/media/roupas/cavadoPreto1.jpg",
   },
   {
     id: 5,
-    name: "blusa 5",
+    name: "Cropped Cavado Vermelho",
     price: 49.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2022/05/18/165286966766696d9c18f155c23c847fa8a817cdfd_thumbnail_600x.webp",
+    image: "src/media/roupas/cavadoVermelho.jpg",
   },
   {
     id: 6,
-    name: "blusa 6",
+    name: "Cropped Regata Preto",
     price: 49.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2021/12/02/163842941336b65217db5a1acc6d27815e30c915d7_thumbnail_600x.webp",
+    image: "src/media/roupas/cpReg.jpg",
   },
   {
     id: 7,
-    name: "Top de malha - Simples ocasional 1",
+    name: "Cropped Trançado Branco",
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["promo"],
-    image:
-      "https://img.ltwebstatic.com/gspCenter/goodsImage/2022/10/16/8370285060_1030691/9EA50E6BEB8682979C60E0A09769C361_thumbnail_600x.jpg",
+    image: "src/media/roupas/cpBranco.jpg",
   },
   {
     id: 8,
-    name: "Top de malha - Simples ocasional 2",
+    name: "Cropped Trançado Preto",
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["promo"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2022/09/14/166314468772e894ee2e231d39c69a77084276bc4c_thumbnail_600x.webp",
+    image: "src/media/roupas/cpPreto.jpg",
   },
   {
     id: 9,
-    name: "Top de malha - Simples ocasional 3",
+    name: "Cropped Meia Lua Pink",
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["promo"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2021/11/16/16370480499bd450418598c5ad275f31b81847225b_thumbnail_600x.webp",
+    image: "src/media/roupas/luaPink.jpg",
   },
   {
     id: 10,
-    name: "Camiseta Listrado ocasional ",
+    name: "Cropped Meia Lua Preto",
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["releases"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2022/04/06/1649236883a937b6e453c8329f2ad36e4511abfde9_thumbnail_600x.webp",
+    image: "src/media/roupas/luaPreto.jpg",
   },
   {
     id: 11,
-    name: "Camiseta de Alface Borboleta ocasional",
+    name: "Calça Lisa Bege",
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["releases"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2022/04/19/1650333066429c7fdb0e727a237d5e486149b8a124_thumbnail_600x.webp",
+    image: "src/media/roupas/calcaBege1.jpg",
   },
   {
     id: 12,
-    name: " Camiseta de Alface Simples ocasional",
+    name: "Calça Lisa Preta",
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["releases"],
-    image:
-      "https://img.ltwebstatic.com/images3_pi/2022/03/03/1646278057ebc92663cf841d3a66948e312d8a7f5f_thumbnail_600x.webp",
+    image: "src/media/roupas/calcaPreta.jpg",
+  },
+  {
+    id: 13,
+    name: "Vestido Curto Com Fenda",
+    price: 79.0,
+    size: ["P"],
+    categories: ["releases"],
+    image: "src/media/roupas/vtCurto3.jpg",
   },
 ];
 
@@ -144,6 +141,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [prod, setProd] = useState();
+  const [isOpenHamb, setOpenHamb] = useState(false);
 
   /* Adiciona item no carrinho de compras */
   function addItem(item) {
@@ -202,6 +200,9 @@ function App() {
       />
       <BrowserRouter>
         <div className="filter">
+          <div className="hamburguer">
+            <Hamburger toggled={isOpenHamb} toggle={setOpenHamb} color="#fff" />
+          </div>
           <Link className="filterLink" to="/">
             Todos os Produtos
           </Link>

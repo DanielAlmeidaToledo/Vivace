@@ -1,11 +1,11 @@
 .slider{
     width: 100%;
+    overflow: hidden;
 }
 
 .div-slide img{
     width: 100vw;
     height: 70vh;
-    margin-bottom: 10px;
     display: flex;
 }
 
@@ -38,7 +38,7 @@
 @media (max-width: 640px){
     .div-slide img{
         width: 100vw;
-        height: 40vh;
+        height: 30vh;
     }
 
     .info{

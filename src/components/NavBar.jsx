@@ -17,7 +17,7 @@ const NavBar = ({ cartShop, quantidade: countCart, removeItem, addItem }) => {
         <img src={logo} alt="Logo Vivace" className="logo" />
       </a>
       <ul className="nav-ul">
-        <li className="nav-li">
+        <li className="nav-li navSearch">
           <input
             placeholder="Pesquisar..."
             type="text"
@@ -26,7 +26,7 @@ const NavBar = ({ cartShop, quantidade: countCart, removeItem, addItem }) => {
           />
           <FaSearch className="icon-search" />
         </li>
-        <li className="nav-li">
+        <li className="nav-li navProdutos">
           <a href="/">Produtos</a>
         </li>
 
