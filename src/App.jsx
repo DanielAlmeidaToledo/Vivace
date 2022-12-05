@@ -20,7 +20,7 @@ const products = [
     price: 49.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image: "src/media/roupas/bdChiclete.jpg",
+    image: "media/roupas/bdChiclete.jpg",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const products = [
     price: 39.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image: "src/media/roupas/bdRosado.jpg",
+    image: "media/roupas/bdRosado.jpg",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const products = [
     price: 55.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image: "src/media/roupas/bdVerde.jpg",
+    image: "media/roupas/bdVerde.jpg",
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const products = [
     price: 29.9,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image: "src/media/roupas/cavadoPreto1.jpg",
+    image: "media/roupas/cavadoPreto1.jpg",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const products = [
     price: 49.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image: "src/media/roupas/cavadoVermelho.jpg",
+    image: "media/roupas/cavadoVermelho.jpg",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const products = [
     price: 49.0,
     size: ["P", "M", "G"],
     categories: ["hot"],
-    image: "src/media/roupas/cpReg.jpg",
+    image: "media/roupas/cpReg.jpg",
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const products = [
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["promo"],
-    image: "src/media/roupas/cpBranco.jpg",
+    image: "media/roupas/cpBranco.jpg",
   },
   {
     id: 8,
@@ -76,7 +76,7 @@ const products = [
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["promo"],
-    image: "src/media/roupas/cpPreto.jpg",
+    image: "media/roupas/cpPreto.jpg",
   },
   {
     id: 9,
@@ -84,7 +84,7 @@ const products = [
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["promo"],
-    image: "src/media/roupas/luaPink.jpg",
+    image: "media/roupas/luaPink.jpg",
   },
   {
     id: 10,
@@ -92,7 +92,7 @@ const products = [
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["releases"],
-    image: "src/media/roupas/luaPreto.jpg",
+    image: "media/roupas/luaPreto.jpg",
   },
   {
     id: 11,
@@ -100,7 +100,7 @@ const products = [
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["releases"],
-    image: "src/media/roupas/calcaBege1.jpg",
+    image: "media/roupas/calcaBege1.jpg",
   },
   {
     id: 12,
@@ -108,7 +108,7 @@ const products = [
     price: 29.0,
     size: ["P", "M", "G"],
     categories: ["releases"],
-    image: "src/media/roupas/calcaPreta.jpg",
+    image: "media/roupas/calcaPreta.jpg",
   },
   {
     id: 13,
@@ -116,7 +116,7 @@ const products = [
     price: 79.0,
     size: ["P"],
     categories: ["releases"],
-    image: "src/media/roupas/vtCurto3.jpg",
+    image: "media/roupas/vtCurto3.jpg",
   },
 ];
 

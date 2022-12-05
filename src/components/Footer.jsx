@@ -3,7 +3,7 @@ import "./Footer.css";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { MdOutlineMailOutline } from "react-icons/md";
 
-import logo from "../media/logo1.png";
+import logo from "/media/logo1.png";
 
 const Footer = () => {
   return (

@@ -4,7 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 import * as Popover from "@radix-ui/react-popover";
 
-import logo from "../media/logo1.png";
+import logo from "/media/logo1.png";
 
 import "./NavBar.css";
 

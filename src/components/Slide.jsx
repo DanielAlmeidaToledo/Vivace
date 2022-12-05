@@ -19,9 +19,8 @@ const Slide = () => {
   };
 
   const imgSlides = [
-    { name: "Imagem 1 - Slide", img: "./../src/media/slide/Slide1.png" },
-    { name: "Imagem 2 - Slide", img: "./../src/media/slide/Slide2.png" },
-    { name: "Imagem 3 - Slide", img: "./../src/media/slide/Slide3.png" },
+    { name: "Imagem 1 - Slide", img: "/media/slide/Slide1.png" },
+    { name: "Imagem 2 - Slide", img: "/media/slide/Slide2.png" },
   ];
 
   const infos = [
