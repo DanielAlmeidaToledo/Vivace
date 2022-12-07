@@ -38,16 +38,18 @@
 @media (max-width: 640px){
     .div-slide img{
         width: 100vw;
-        height: 30vh;
+        height: 25vh;
     }
 
     .info{
         display: block;
+        margin: auto;
     }
 
     .info1{
-        width: 100%;
-        padding: 1rem 0 1rem 3rem;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
         display: flex;
     }
 

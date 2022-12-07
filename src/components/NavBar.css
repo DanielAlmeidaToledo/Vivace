@@ -33,7 +33,7 @@
 }
 
 .navSearch{
-    margin-right: 5rem;
+    padding: 0 2rem;
 }
 
 .nav-li input{
@@ -241,5 +241,8 @@
     }
     .cartContent{
         width: 90vw;
+    }
+    .cartContent{
+        width: 92vw;
     }
 }

@@ -23,8 +23,6 @@
     width: 40%;
     height: 100%;
     display: flexbox;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     color: #fff;
     padding: 0 0 3rem 0;
@@ -37,9 +35,16 @@
     float: right;
 }
 
+.footer-2 div{
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer-2 a{
     color: white;
-    margin: 0rem 2rem 0;
+    margin: 0rem 2rem;
     transition: .3s;
 }
 
@@ -49,6 +54,20 @@
 
 .footer-info h2{
     padding: 1rem 0 2rem;
+}
+
+.devAutor{
+    font-size: .8rem;
+    width: 100%;
+    text-align: center;
+    color: rgb(220, 220, 220);
+    padding: .3rem 0;
+}
+
+.devAutor a{
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+    font-weight: bold;
 }
 
 /* RESPONSIVE */

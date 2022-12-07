@@ -14,10 +14,13 @@ const Footer = () => {
         <div className="footer-1">
           <h2>Sobre</h2>
           <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae
-            incidunt ducimus modi vitae voluptas consequatur consectetur ipsum
-            repudiandae facere quod temporibus veritatis, saepe, harum
-            aspernatur dolore! Autem, quaerat eligendi.
+            A Vivace é uma loja de roupas femininas que acredita em valorizar a
+            beleza e o estilo das mulheres. Oferecemos uma variedade de estilos
+            e tamanhos para que todas as mulheres possam encontrar roupas para
+            expressar sua individualidade. Com preços acessíveis, nossos
+            produtos são de alta qualidade, feitos para durar e criar looks
+            incríveis. Seja moderna, casual ou elegante, a Vivace tem a peça
+            certa para você.
           </span>
         </div>
         <div className="footer-2">
@@ -34,6 +37,17 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="devAutor">
+        <p>
+          Desenvolvido por{" "}
+          <a
+            href="https://www.linkedin.com/in/danielalmeidadetoledo/"
+            target={"_blank"}
+          >
+            Daniel Toledo
+          </a>
+        </p>
       </div>
     </div>
   );
