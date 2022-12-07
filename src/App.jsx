@@ -18,96 +18,96 @@ const products = [
     id: 1,
     name: "Body Rosa",
     price: 49.0,
-    size: ["P", "M", "G"],
-    categories: ["hot"],
+    size: ["M"],
+    categories: ["bodyCropped"],
     image: "media/roupas/bdChiclete.jpg",
   },
   {
     id: 2,
     name: "Body Bege",
     price: 39.0,
-    size: ["P", "M", "G"],
-    categories: ["hot"],
+    size: ["M"],
+    categories: ["bodyCropped"],
     image: "media/roupas/bdRosado.jpg",
   },
   {
     id: 3,
     name: "Body Verde Esmeralda",
     price: 55.0,
-    size: ["P", "M", "G"],
-    categories: ["hot"],
+    size: ["P"],
+    categories: ["bodyCropped"],
     image: "media/roupas/bdVerde.jpg",
   },
   {
     id: 4,
     name: "Cropped Cavado Preto",
     price: 29.9,
-    size: ["P", "M", "G"],
-    categories: ["hot"],
+    size: ["M"],
+    categories: ["bodyCropped"],
     image: "media/roupas/cavadoPreto1.jpg",
   },
   {
     id: 5,
     name: "Cropped Cavado Vermelho",
     price: 49.0,
-    size: ["P", "M", "G"],
-    categories: ["hot"],
+    size: ["P"],
+    categories: ["bodyCropped"],
     image: "media/roupas/cavadoVermelho.jpg",
   },
   {
     id: 6,
     name: "Cropped Regata Preto",
     price: 49.0,
-    size: ["P", "M", "G"],
-    categories: ["hot"],
+    size: ["M", "G"],
+    categories: ["bodyCropped"],
     image: "media/roupas/cpReg.jpg",
   },
   {
     id: 7,
     name: "Cropped Trançado Branco",
     price: 29.0,
-    size: ["P", "M", "G"],
-    categories: ["promo"],
+    size: ["P", "M"],
+    categories: ["bodyCropped"],
     image: "media/roupas/cpBranco.jpg",
   },
   {
     id: 8,
     name: "Cropped Trançado Preto",
     price: 29.0,
-    size: ["P", "M", "G"],
-    categories: ["promo"],
+    size: ["M"],
+    categories: ["bodyCropped"],
     image: "media/roupas/cpPreto.jpg",
   },
   {
     id: 9,
     name: "Cropped Meia Lua Pink",
     price: 29.0,
-    size: ["P", "M", "G"],
-    categories: ["promo"],
+    size: ["M"],
+    categories: ["bodyCropped"],
     image: "media/roupas/luaPink.jpg",
   },
   {
     id: 10,
     name: "Cropped Meia Lua Preto",
     price: 29.0,
-    size: ["P", "M", "G"],
-    categories: ["releases"],
+    size: ["P", "M"],
+    categories: ["bodyCropped"],
     image: "media/roupas/luaPreto.jpg",
   },
   {
     id: 11,
     name: "Calça Lisa Bege",
     price: 29.0,
-    size: ["P", "M", "G"],
-    categories: ["releases"],
+    size: ["P"],
+    categories: ["calcaSaia"],
     image: "media/roupas/calcaBege1.jpg",
   },
   {
     id: 12,
     name: "Calça Lisa Preta",
     price: 29.0,
-    size: ["P", "M", "G"],
-    categories: ["releases"],
+    size: ["M"],
+    categories: ["calcaSaia"],
     image: "media/roupas/calcaPreta.jpg",
   },
   {
@@ -115,24 +115,24 @@ const products = [
     name: "Vestido Curto Com Fenda",
     price: 79.0,
     size: ["P"],
-    categories: ["releases"],
+    categories: ["vestido"],
     image: "media/roupas/vtCurto3.jpg",
   },
 ];
 
 /* Novidades */
-const hotProducts = products.filter((product) =>
-  product.categories.includes("hot")
+const bodyCropped = products.filter((product) =>
+  product.categories.includes("bodyCropped")
 );
 
 /* Lançamentos */
-const releaseProducts = products.filter((product) =>
-  product.categories.includes("releases")
+const calcaSaia = products.filter((product) =>
+  product.categories.includes("calcaSaia")
 );
 
 /* Promoções */
-const promoProducts = products.filter((product) =>
-  product.categories.includes("promo")
+const vestido = products.filter((product) =>
+  product.categories.includes("vestido")
 );
 
 function App() {
@@ -206,14 +206,14 @@ function App() {
           <Link className="filterLink" to="/">
             Todos os Produtos
           </Link>
-          <Link className="filterLink" to="/lancamentos">
-            Lançamentos
+          <Link className="filterLink" to="/body-cropped">
+            Body / Cropped
           </Link>
-          <Link className="filterLink" to="/mais-vendidos">
-            Mais Vendidos
+          <Link className="filterLink" to="/calças-saias">
+            Calças / Saias
           </Link>
-          <Link className="filterLink" to="/promocoes">
-            Promoções
+          <Link className="filterLink" to="/vestidos">
+            Vestidos
           </Link>
         </div>
 
@@ -234,38 +234,38 @@ function App() {
             }
           ></Route>
           <Route
-            path="/lancamentos"
+            path="/body-cropped"
             element={
               <Product
-                products={hotProducts}
+                products={bodyCropped}
                 addItem={addItem}
                 showAlert={showAlert}
                 handleClickOpen={handleClickOpen}
-                title="Lançamentos"
+                title="Body / Cropped"
               />
             }
           ></Route>
           <Route
-            path="/mais-vendidos"
+            path="/calças-saias"
             element={
               <Product
-                products={releaseProducts}
+                products={calcaSaia}
                 addItem={addItem}
                 showAlert={showAlert}
                 handleClickOpen={handleClickOpen}
-                title="Mais Vendidos"
+                title="Calças / Saias"
               />
             }
           ></Route>
           <Route
-            path="/promocoes"
+            path="/vestidos"
             element={
               <Product
-                products={promoProducts}
+                products={vestido}
                 addItem={addItem}
                 showAlert={showAlert}
                 handleClickOpen={handleClickOpen}
-                title="Promoções"
+                title="Vestidos"
               />
             }
           ></Route>
