@@ -96,11 +96,11 @@ const products = [
   },
   {
     id: 11,
-    name: "Calça Lisa Bege",
-    price: 29.0,
+    name: "Cropped Longo Preto",
+    price: 79.0,
     size: ["P"],
-    categories: ["calcaSaia"],
-    image: "media/roupas/calcaBege1.jpg",
+    categories: ["bodyCropped"],
+    image: "media/roupas/longoPreto.jpg",
   },
   {
     id: 12,
@@ -117,6 +117,22 @@ const products = [
     size: ["P"],
     categories: ["vestido"],
     image: "media/roupas/vtCurto3.jpg",
+  },
+  {
+    id: 14,
+    name: "Calça Lisa Bege",
+    price: 29.0,
+    size: ["P"],
+    categories: ["calcaSaia"],
+    image: "media/roupas/calcaBege1.jpg",
+  },
+  {
+    id: 15,
+    name: "Saia Rosa",
+    price: 59.0,
+    size: ["P"],
+    categories: ["calcaSaia"],
+    image: "media/roupas/saia.jpg",
   },
 ];
 

@@ -1,78 +1,58 @@
-.modal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modalTopo{
+    background-color: #FF99C8;
+    width: 100%;
 }
 
-.dialogContent{
-    width: 40rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem auto;
-}
-
-.dialogImg{
-    width: 21rem;
-    height: 27rem;
-}
-
-.information{
-    display: flexbox;
-    float: right;
-    height: 27rem;
-    width: 16rem;
-    justify-content: center;
-    align-items: center;
+.modalTitle{
     text-align: center;
 }
 
-.information h3{
-    margin: 3rem 0 0 0;
-    color: #000;
-    font-size: 1.7rem;
+.modalBtn:hover{
+    color: red;
 }
 
-.information p{
-    font-size: 1.5rem;
-    color: black;
-    margin: 1rem 0;
-}
-
-.addCartModal{
-    font-size: 1.2rem;
-    padding: .5rem .8rem;
-    background: #FF99C8;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    border-radius: .2rem;
-    border: none;
-    filter: .5s;
+.modalContent{
+    margin-top: 1rem;
     display: flex;
-    height: 3rem;
+    justify-content: space-around;
+}
+
+.modalImg{
+    height: 65vh;
+    border-radius: .5rem;
+}
+
+.modalInfo{
+    width: 40vh;
+    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 5rem auto 0;
+    flex-wrap: wrap;
 }
 
-.addCartModal:hover{
-    filter: saturate(1.3);
+.modalDesc{
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
 }
 
-.dialogClose{
-    position: absolute;
-    color: #FF99C8;
-    background-color: #e3e3e3;
-    width: 2rem;
-    height: 2rem;
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: .3s;
-    margin: -3vh auto 0 90vh;
+.modalDesc span{
+    width: 80%;
+    padding-top: 1rem;
 }
 
-.dialogClose:hover{
-    background-color: #FF99C8;
-    color: #fff;
-}
+@media (max-width: 710px){
+    .modalContent{
+        display: block;
+        text-align: center;
+    }
+    .modalImg{
+        width: 80%;
+    }
+    .modalInfo{
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+    }
+  }
