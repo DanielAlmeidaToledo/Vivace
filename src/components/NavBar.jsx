@@ -8,7 +8,16 @@ import logo from "/media/logo1.png";
 
 import "./NavBar.css";
 
-const NavBar = ({ cartShop, quantidade: countCart, removeItem, addItem }) => {
+import { useState } from "react";
+
+const NavBar = ({
+  cartShop,
+  quantidade: countCart,
+  removeItem,
+  addItem,
+  searchFilter,
+}) => {
+  const [search, setSearch] = useState("");
   var totalPrice = 0;
 
   return (
@@ -23,8 +32,12 @@ const NavBar = ({ cartShop, quantidade: countCart, removeItem, addItem }) => {
             type="text"
             name="search"
             id="search"
+            onChange={(e) => setSearch(e.target.value)}
           />
-          <FaSearch className="icon-search" />
+          <FaSearch
+            className="icon-search"
+            onClick={() => searchFilter(search.toLowerCase())}
+          />
         </li>
         <li className="nav-li navProdutos">
           <a href="/">Produtos</a>
@@ -91,7 +104,22 @@ const NavBar = ({ cartShop, quantidade: countCart, removeItem, addItem }) => {
                           currency: "BRL",
                         })}
                       </p>
-                      <a href="" className="btnBuy">
+                      <a
+                        target={"_blank"}
+                        href={`https://api.whatsapp.com/send?phone=5515981813023&text=%E2%9C%A8%20VIVACE%20%E2%9C%A8%0A%0AOii,%20tudo%20bem?%20%0AGostei%20desses%20itens%20e%20tenho%20interesse%20em%20comprar:${cartShop.map(
+                          (item) => {
+                            const { name, price, size, image, count } = item;
+                            return `%0A%0A*Item:*%20${name}%0A*Tamanho:*%20${size}%0A*Quantidade:*%20${count}%0A*Valor:*%20${price.toLocaleString(
+                              "pt-br",
+                              {
+                                style: "currency",
+                                currency: "BRL",
+                              }
+                            )}`;
+                          }
+                        )}`}
+                        className="btnBuy"
+                      >
                         Finalizar Compra
                       </a>
                     </div>

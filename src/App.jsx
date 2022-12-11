@@ -141,6 +141,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [prod, setProd] = useState();
+  const [prods, setProds] = useState(products);
   const [isOpenHamb, setOpenHamb] = useState(false);
 
   /* Adiciona item no carrinho de compras */
@@ -190,6 +191,14 @@ function App() {
     setOpen1(false);
   };
 
+  /* SEARCH */
+
+  function searchFilter(valueSearch) {
+    setProds(
+      products.filter((prod) => prod.name.toLowerCase().includes(valueSearch))
+    );
+  }
+
   return (
     <div className="App">
       <NavBar
@@ -197,6 +206,7 @@ function App() {
         quantidade={countCart}
         removeItem={removeItem}
         addItem={addItem}
+        searchFilter={searchFilter}
       />
       <BrowserRouter>
         <div className="filter">
@@ -224,7 +234,7 @@ function App() {
               <>
                 <Slide />
                 <Product
-                  products={products}
+                  products={prods}
                   addItem={addItem}
                   showAlert={showAlert}
                   handleClickOpen={handleClickOpen}
