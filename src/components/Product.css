@@ -85,3 +85,12 @@
 .iconAdd{
     margin-left: .5rem;
 }
+
+.naoEncontrado{
+    font-size: 1.3rem;
+    margin: 8rem 0;
+    color: #FF99C8;
+}
+
+@media (max-width: 710px){ 
+}

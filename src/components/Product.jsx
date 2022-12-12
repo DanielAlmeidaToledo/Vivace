@@ -14,7 +14,7 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
               className="btnProduct"
               onClick={() => handleClickOpen(item)}
             >
-              <img src={image} alt="" />
+              <img src={image[0]} alt="" />
             </button>
             <p>{name}</p>
             <div className="infos">
@@ -47,6 +47,9 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
           </div>
         );
       })}
+      {products.length === 0 && (
+        <h4 className="naoEncontrado">Nenhum produto encontrado :(</h4>
+      )}
     </main>
   );
 };
