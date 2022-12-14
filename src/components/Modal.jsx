@@ -117,19 +117,17 @@ const Modal = ({ item, open, handleClose, addItem, showAlert }) => {
                 <span>Adicionar</span>
                 <MdOutlineAddShoppingCart size={25} className="iconAdd" />
               </button>
+              <div className="modalDesc">
+                <h3 className="descTitle">Descrição</h3>
+                <span>
+                  {item.description}
+                  <br />
+                  {item.descSize}
+                </span>
+              </div>
             </div>
           </div>
-          <ListItem>
-            <div className="modalDesc">
-              <h3 className="descTitle">Descrição</h3>
-              <span>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-                corrupti officiis incidunt doloribus ea officia ipsam earum
-                magni a blanditiis id rerum, ipsa, consequatur fuga. Ratione
-                nostrum enim vel blanditiis.
-              </span>
-            </div>
-          </ListItem>
+          <ListItem></ListItem>
         </List>
       </Dialog>
     </div>

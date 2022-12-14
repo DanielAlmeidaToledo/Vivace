@@ -17,26 +17,35 @@ const products = [
   {
     id: 1,
     name: "Body Rosa",
-    price: 49.0,
+    price: 39.9,
     size: ["M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/bdChiclete.jpg"],
+    description:
+      "Canelado grosso, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "Cintura: 67, Busto: 71, Comprimento: 71",
   },
   {
     id: 2,
     name: "Body Bege",
-    price: 39.0,
+    price: 39.9,
     size: ["M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/bdRosado.jpg"],
+    description:
+      "Canelado grosso, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "Cintura: 71, Busto: 76, Comprimento: 68",
   },
   {
     id: 3,
     name: "Body Verde Esmeralda",
-    price: 55.0,
+    price: 39.9,
     size: ["P"],
     categories: ["bodyCropped"],
     image: ["media/roupas/bdVerde.jpg"],
+    description:
+      "Canelado grosso, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "Cintura: 69, Busto: 69, Comprimento: 70",
   },
   {
     id: 4,
@@ -45,6 +54,7 @@ const products = [
     size: ["M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cavadoPreto1.jpg", "media/roupas/cavadoPreto2.jpg"],
+    description: "Confeccionado em canelado macio, básico.",
   },
   {
     id: 5,
@@ -53,6 +63,7 @@ const products = [
     size: ["P"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cavadoVermelho.jpg"],
+    description: "Confeccionado em canelado macio, básico.",
   },
   {
     id: 6,
@@ -61,6 +72,7 @@ const products = [
     size: ["M", "G"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpReg.jpg"],
+    description: "Confeccionado em canelado macio, básico.",
   },
   {
     id: 7,
@@ -69,6 +81,7 @@ const products = [
     size: ["P", "M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpBranco.jpg"],
+    description: "Confeccionado em canelado macio, básico.",
   },
   {
     id: 8,
@@ -77,43 +90,31 @@ const products = [
     size: ["M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpPreto.jpg"],
+    description: "Confeccionado em canelado macio, básico.",
   },
   {
     id: 9,
-    name: "Cropped Meia Lua Pink",
-    price: 29.0,
-    size: ["M"],
-    categories: ["bodyCropped"],
-    image: ["media/roupas/luaPink.jpg"],
-  },
-  {
-    id: 10,
-    name: "Cropped Meia Lua Preto",
-    price: 29.0,
-    size: ["P", "M"],
-    categories: ["bodyCropped"],
-    image: ["media/roupas/luaPreto.jpg"],
-  },
-  {
-    id: 11,
     name: "Cropped Longo Preto",
     price: 79.0,
     size: ["P"],
     categories: ["bodyCropped"],
     image: ["media/roupas/longoPreto.jpg"],
+    description: "Confeccionado em suplex, sem bojo.",
   },
   {
-    id: 12,
+    id: 10,
     name: "Calça Lisa Preta",
-    price: 29.0,
+    price: 79.9,
     size: ["M"],
     categories: ["calcaSaia"],
     image: ["media/roupas/calcaPreta.jpg"],
+    description:
+      "Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
   },
   {
-    id: 13,
+    id: 11,
     name: "Vestido Curto Com Fenda",
-    price: 79.0,
+    price: 49.0,
     size: ["P"],
     categories: ["vestido"],
     image: [
@@ -121,22 +122,27 @@ const products = [
       "media/roupas/vtCurto1.jpg",
       "media/roupas/vtCurto2.jpg",
     ],
+    description:
+      "Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
   },
   {
-    id: 14,
+    id: 12,
     name: "Calça Lisa Bege",
-    price: 29.0,
+    price: 79.9,
     size: ["P"],
     categories: ["calcaSaia"],
     image: ["media/roupas/calcaBege1.jpg", "media/roupas/calcaBege2.jpg"],
+    description:
+      "Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
   },
   {
-    id: 15,
+    id: 13,
     name: "Saia Rosa",
-    price: 59.0,
+    price: 44.9,
     size: ["P"],
     categories: ["calcaSaia"],
     image: ["media/roupas/saia.jpg"],
+    description: "Tecido crepe, 90% poliéster, 10% elastano. Com zíper atrás.",
   },
 ];
 

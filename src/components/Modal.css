@@ -1,7 +1,6 @@
 .modalTopo{
-    width: 95%;
-    margin: 0 auto;
-    background-color: #FF99C8;
+    width: 100%;
+    background: #FF99C8;
 }
 
 .modalTitle{
@@ -19,8 +18,8 @@
 }
 
 .modalImg{
-    width: 25vw;
-    height: 60vh;
+    width: 33vw;
+    height: 80vh;
     border-radius: .5rem;
     display: flex;
     margin: 0 auto;
@@ -48,8 +47,9 @@
 
 .modalDesc{
     text-align: center;
-    width: 100%;
     padding: 1rem 0;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .descTitle{
@@ -65,8 +65,16 @@
 
 .slick-thumb{
     display: flex; 
-    width: 20%;
-    margin: 0 30rem 2rem auto;
+    width: 7%;
+    margin: 0 31rem 2rem auto;
+    overflow: hidden;
+}
+
+
+
+.modalImg1{
+    width: 100vw;
+    overflow: hidden;
 }
 
 @media (max-width: 710px){

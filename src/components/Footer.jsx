@@ -16,11 +16,10 @@ const Footer = () => {
           <span>
             A Vivace é uma loja de roupas femininas que acredita em valorizar a
             beleza e o estilo das mulheres. Oferecemos uma variedade de estilos
-            e tamanhos para que todas as mulheres possam encontrar roupas para
-            expressar sua individualidade. Com preços acessíveis, nossos
-            produtos são de alta qualidade, feitos para durar e criar looks
-            incríveis. Seja moderna, casual ou elegante, a Vivace tem a peça
-            certa para você.
+            para que todas as mulheres possam encontrar roupas para expressar
+            sua individualidade. Com preços acessíveis, nossos produtos são de
+            qualidade, feitos para durar e criar looks incríveis. Seja moderna,
+            casual ou elegante, a Vivace tem a peça certa para você.
           </span>
         </div>
         <div className="footer-2">
