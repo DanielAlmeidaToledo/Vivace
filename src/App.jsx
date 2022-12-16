@@ -51,6 +51,17 @@ const products = [
   },
   {
     id: 4,
+    name: "Body Preto",
+    price: 39.9,
+    size: ["G"],
+    categories: ["bodyCropped"],
+    image: ["media/roupas/bdPreto.jpg"],
+    description:
+      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
+    descSize: "📐 Cintura: 67cm, Busto: 71cm, Comprimento: 71cm",
+  },
+  {
+    id: 5,
     name: "Cropped Cavado Preto",
     price: 22.9,
     size: ["M"],
@@ -61,7 +72,7 @@ const products = [
     descSize: "📐 Busto: 24cm, Comprimento: 26cm",
   },
   {
-    id: 5,
+    id: 6,
     name: "Cropped Cavado Vermelho",
     price: 22.9,
     size: ["P"],
@@ -72,7 +83,7 @@ const products = [
     descSize: "📐 Busto: 27cm, Comprimento: 27cm",
   },
   {
-    id: 6,
+    id: 7,
     name: "Cropped Regata Preto",
     price: 26.9,
     size: ["P", "M"],
@@ -84,7 +95,7 @@ const products = [
       "📐 Preto P = Busto: 66cm, Comprimento: 38cm; Preto M =  Busto: 72cm, Comprimento: 41cm",
   },
   {
-    id: 7,
+    id: 8,
     name: "Cropped Trançado Branco",
     price: 43.9,
     size: ["P", "M"],
@@ -96,7 +107,7 @@ const products = [
       "📐 Branco P = Busto: 69cm, Comprimento: 35cm; Branco M = Busto: 77cm, Comprimento: 38cm",
   },
   {
-    id: 8,
+    id: 9,
     name: "Cropped Trançado Preto",
     price: 43.9,
     size: ["P"],
@@ -107,7 +118,7 @@ const products = [
     descSize: "📐 Busto: 69cm, Comprimento: 35cm",
   },
   {
-    id: 9,
+    id: 10,
     name: "Cropped Longo Preto",
     price: 39.9,
     size: ["M", "G"],
@@ -118,7 +129,7 @@ const products = [
       "📐 Preto M = Busto: 75cm, Comprimento: 39cm, Gola: 30cm, Comp. manga: 58cm; Preto G =  Busto: 78cm, Comprimento: 40cm, Gola: 33cm, Comp. manga: 59cm",
   },
   {
-    id: 10,
+    id: 11,
     name: "Calça Lisa Preta",
     price: 79.9,
     size: ["M"],
@@ -130,7 +141,7 @@ const products = [
       "📐 Cintura: 72cm, Quadril: 92cm, Cavaco: 34cm, Comprimento: 110cm",
   },
   {
-    id: 11,
+    id: 12,
     name: "Vestido Curto Com Fenda",
     price: 49.9,
     size: ["P"],
@@ -145,7 +156,7 @@ const products = [
     descSize: "📐 Cintura: 63cm, Busto: 57cm, Comprimento: 74cm",
   },
   {
-    id: 12,
+    id: 13,
     name: "Calça Lisa Bege",
     price: 79.9,
     size: ["P"],
@@ -157,7 +168,7 @@ const products = [
       "📐 Cintura: 66cm, Quadril: 92cm, Cavaco: 33cm, Comprimento: 108cm",
   },
   {
-    id: 13,
+    id: 14,
     name: "Saia Rosa",
     price: 46.9,
     size: ["P"],
@@ -198,42 +209,40 @@ function App() {
 
   /* Adiciona item no carrinho de compras */
   function addItem(item) {
-    setCartShop((items) => {
-      const nArray = [...items];
-
-      const nIndex = nArray.findIndex((product) => product.id == item.id);
-      if (nIndex < 0) {
-        return [
-          ...nArray,
-          {
-            id: item.id,
-            name: item.name,
-            price: item.price,
-            size: item.size,
-            image: item.image,
-            count: 1,
-          },
-        ];
-      }
+    const nArray = [...cartShop];
+    const nIndex = nArray.findIndex((product) => product.id == item.id);
+    if (nIndex < 0) {
+      setCartShop([
+        ...nArray,
+        {
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          size: item.size,
+          image: item.image,
+          count: 1,
+        },
+      ]);
+    } else {
+      nArray[nIndex].price += nArray[nIndex].price / nArray[nIndex].count;
       nArray[nIndex].count += 1;
-      nArray[nIndex].price += nArray[nIndex].price / (nArray[nIndex].count - 1);
-      return items;
-    });
+      setCartShop(nArray);
+      console.log(cartShop);
+    }
   }
 
   /* Remove item no carrinho de compras */
   function removeItem(item) {
-    setCartShop((items) => {
-      const nArray = [...items];
-
-      const nIndex = nArray.findIndex((product) => product.id == item.id);
+    const nArray = [...cartShop];
+    const nIndex = nArray.findIndex((product) => product.id == item.id);
+    if (nIndex >= 0) {
       nArray[nIndex].price -= nArray[nIndex].price / nArray[nIndex].count;
       nArray[nIndex].count -= 1;
-      if (item.count === 0) {
-        items.splice(nIndex, 1);
-      }
-      return items;
-    });
+    }
+    if (item.count === 0) {
+      nArray.splice(nIndex, 1);
+    }
+    setCartShop(nArray);
   }
 
   /* Alerta de adição de itens no carrinho */
