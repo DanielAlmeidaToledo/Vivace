@@ -6,8 +6,10 @@ import Modal from "./components/Modal";
 
 import Alert from "@mui/material/Alert";
 import Hamburger from "hamburger-react";
+import * as Popover from "@radix-ui/react-popover";
 
 import { useState } from "react";
+import React from "react";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 import "./App.css";
@@ -22,8 +24,8 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/bdChiclete.jpg"],
     description:
-      "Canelado grosso, duplo tecido no busto, 92% poliester, 8% elastano.",
-    descSize: "Cintura: 67, Busto: 71, Comprimento: 71",
+      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
+    descSize: "📐 Cintura: 67cm, Busto: 71cm, Comprimento: 71cm",
   },
   {
     id: 2,
@@ -33,8 +35,8 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/bdRosado.jpg"],
     description:
-      "Canelado grosso, duplo tecido no busto, 92% poliester, 8% elastano.",
-    descSize: "Cintura: 71, Busto: 76, Comprimento: 68",
+      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
+    descSize: "📐 Cintura: 71cm, Busto: 69cm, Comprimento: 70cm",
   },
   {
     id: 3,
@@ -44,62 +46,76 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/bdVerde.jpg"],
     description:
-      "Canelado grosso, duplo tecido no busto, 92% poliester, 8% elastano.",
-    descSize: "Cintura: 69, Busto: 69, Comprimento: 70",
+      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
+    descSize: "📐 Cintura: 69cm, Busto: 69cm, Comprimento: 70cm",
   },
   {
     id: 4,
     name: "Cropped Cavado Preto",
-    price: 29.9,
+    price: 22.9,
     size: ["M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cavadoPreto1.jpg", "media/roupas/cavadoPreto2.jpg"],
-    description: "Confeccionado em canelado macio, básico.",
+    description:
+      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    descSize: "📐 Busto: 24cm, Comprimento: 26cm",
   },
   {
     id: 5,
     name: "Cropped Cavado Vermelho",
-    price: 49.0,
+    price: 22.9,
     size: ["P"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cavadoVermelho.jpg"],
-    description: "Confeccionado em canelado macio, básico.",
+    description:
+      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    descSize: "📐 Busto: 27cm, Comprimento: 27cm",
   },
   {
     id: 6,
     name: "Cropped Regata Preto",
-    price: 49.0,
-    size: ["M", "G"],
+    price: 26.9,
+    size: ["P", "M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpReg.jpg"],
-    description: "Confeccionado em canelado macio, básico.",
+    description:
+      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    descSize:
+      "📐 Preto P = Busto: 66cm, Comprimento: 38cm; Preto M =  Busto: 72cm, Comprimento: 41cm",
   },
   {
     id: 7,
     name: "Cropped Trançado Branco",
-    price: 29.0,
+    price: 43.9,
     size: ["P", "M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpBranco.jpg"],
-    description: "Confeccionado em canelado macio, básico.",
+    description:
+      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    descSize:
+      "📐 Branco P = Busto: 69cm, Comprimento: 35cm; Branco M = Busto: 77cm, Comprimento: 38cm",
   },
   {
     id: 8,
     name: "Cropped Trançado Preto",
-    price: 29.0,
-    size: ["M"],
+    price: 43.9,
+    size: ["P"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpPreto.jpg"],
-    description: "Confeccionado em canelado macio, básico.",
+    description:
+      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    descSize: "📐 Busto: 69cm, Comprimento: 35cm",
   },
   {
     id: 9,
     name: "Cropped Longo Preto",
-    price: 79.0,
-    size: ["P"],
+    price: 39.9,
+    size: ["M", "G"],
     categories: ["bodyCropped"],
     image: ["media/roupas/longoPreto.jpg"],
-    description: "Confeccionado em suplex, sem bojo.",
+    description: "🧣 Confeccionado em suplex, sem bojo.",
+    descSize:
+      "📐 Preto M = Busto: 75cm, Comprimento: 39cm, Gola: 30cm, Comp. manga: 58cm; Preto G =  Busto: 78cm, Comprimento: 40cm, Gola: 33cm, Comp. manga: 59cm",
   },
   {
     id: 10,
@@ -109,12 +125,14 @@ const products = [
     categories: ["calcaSaia"],
     image: ["media/roupas/calcaPreta.jpg"],
     description:
-      "Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
+      "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
+    descSize:
+      "📐 Cintura: 72cm, Quadril: 92cm, Cavaco: 34cm, Comprimento: 110cm",
   },
   {
     id: 11,
     name: "Vestido Curto Com Fenda",
-    price: 49.0,
+    price: 49.9,
     size: ["P"],
     categories: ["vestido"],
     image: [
@@ -123,7 +141,8 @@ const products = [
       "media/roupas/vtCurto2.jpg",
     ],
     description:
-      "Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    descSize: "📐 Cintura: 63cm, Busto: 57cm, Comprimento: 74cm",
   },
   {
     id: 12,
@@ -133,16 +152,20 @@ const products = [
     categories: ["calcaSaia"],
     image: ["media/roupas/calcaBege1.jpg", "media/roupas/calcaBege2.jpg"],
     description:
-      "Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
+      "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
+    descSize:
+      "📐 Cintura: 66cm, Quadril: 92cm, Cavaco: 33cm, Comprimento: 108cm",
   },
   {
     id: 13,
     name: "Saia Rosa",
-    price: 44.9,
+    price: 46.9,
     size: ["P"],
     categories: ["calcaSaia"],
     image: ["media/roupas/saia.jpg"],
-    description: "Tecido crepe, 90% poliéster, 10% elastano. Com zíper atrás.",
+    description:
+      "🧣 Tecido crepe, 90% poliéster, 10% elastano. Com zíper atrás.",
+    descSize: "📐 Cintura: 72cm, Quadril: 92cm, Comprimento: 39cm",
   },
 ];
 
@@ -163,41 +186,54 @@ const vestido = products.filter((product) =>
 
 function App() {
   const [cartShop, setCartShop] = useState([]);
-  const [countCart, setCountCart] = useState(cartShop.length);
+  const countCart = cartShop.reduce((acc, item) => {
+    return acc + item.count;
+  }, 0);
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [prod, setProd] = useState();
   const [prods, setProds] = useState(products);
   const [isOpenHamb, setOpenHamb] = useState(false);
+  const [name, setName] = useState("");
 
   /* Adiciona item no carrinho de compras */
   function addItem(item) {
-    setCountCart((countCart) => countCart + 1);
-    let index = cartShop.findIndex((product) => product.id == item.id);
-    if (index < 0) {
-      cartShop.push({
-        id: item.id,
-        name: item.name,
-        price: item.price,
-        size: item.size,
-        image: item.image,
-        count: 1,
-      });
-    } else {
-      cartShop[index].count++;
-      cartShop[index].price += item.price / (cartShop[index].count - 1);
-    }
+    setCartShop((items) => {
+      const nArray = [...items];
+
+      const nIndex = nArray.findIndex((product) => product.id == item.id);
+      if (nIndex < 0) {
+        return [
+          ...nArray,
+          {
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            size: item.size,
+            image: item.image,
+            count: 1,
+          },
+        ];
+      }
+      nArray[nIndex].count += 1;
+      nArray[nIndex].price += nArray[nIndex].price / (nArray[nIndex].count - 1);
+      return items;
+    });
   }
 
   /* Remove item no carrinho de compras */
   function removeItem(item) {
-    setCountCart((countCart) => countCart - 1);
-    let index = cartShop.findIndex((product) => product.id == item.id);
-    cartShop[index].price -= item.price / item.count;
-    cartShop[index].count--;
-    if (item.count === 0) {
-      cartShop.splice(index, 1);
-    }
+    setCartShop((items) => {
+      const nArray = [...items];
+
+      const nIndex = nArray.findIndex((product) => product.id == item.id);
+      nArray[nIndex].price -= nArray[nIndex].price / nArray[nIndex].count;
+      nArray[nIndex].count -= 1;
+      if (item.count === 0) {
+        items.splice(nIndex, 1);
+      }
+      return items;
+    });
   }
 
   /* Alerta de adição de itens no carrinho */
@@ -223,6 +259,7 @@ function App() {
     setProds(
       products.filter((prod) => prod.name.toLowerCase().includes(valueSearch))
     );
+    setName(valueSearch);
   }
 
   return (
@@ -236,9 +273,6 @@ function App() {
       />
       <BrowserRouter>
         <div className="filter">
-          <div className="hamburguer">
-            <Hamburger toggled={isOpenHamb} toggle={setOpenHamb} color="#fff" />
-          </div>
           <Link className="filterLink" to="/">
             Todos os Produtos
           </Link>
@@ -253,19 +287,62 @@ function App() {
           </Link>
         </div>
 
+        <Popover.Root>
+          <Popover.Trigger className="hamburguer">
+            <Hamburger toggled={isOpenHamb} toggle={setOpenHamb} color="#fff" />
+          </Popover.Trigger>
+          <Popover.Portal>
+            <Popover.Content className="PopoverContent">
+              <div className="filter1">
+                <Link to="/">
+                  <Popover.Close className="filterClose" aria-label="Close">
+                    ● Todos os Produtos
+                  </Popover.Close>
+                </Link>
+                <Link to="/body-cropped">
+                  <Popover.Close className="filterClose" aria-label="Close">
+                    ● Body / Cropped
+                  </Popover.Close>
+                </Link>
+                <Link to="/calças-saias">
+                  <Popover.Close className="filterClose" aria-label="Close">
+                    ● Calças / Saias
+                  </Popover.Close>
+                </Link>
+                <Link to="/vestidos">
+                  <Popover.Close className="filterClose" aria-label="Close">
+                    ● Vestidos
+                  </Popover.Close>
+                </Link>
+              </div>
+              <Popover.Arrow className="PopoverArrow" />
+            </Popover.Content>
+          </Popover.Portal>
+        </Popover.Root>
+
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Slide />
-                <Product
-                  products={prods}
-                  addItem={addItem}
-                  showAlert={showAlert}
-                  handleClickOpen={handleClickOpen}
-                  title="Todos os Produtos"
-                />
+                {prods.length === products.length && <Slide />}
+                {name === "" ? (
+                  <Product
+                    products={prods}
+                    addItem={addItem}
+                    showAlert={showAlert}
+                    handleClickOpen={handleClickOpen}
+                    title="Todos os Produtos"
+                  />
+                ) : (
+                  <Product
+                    products={prods}
+                    addItem={addItem}
+                    showAlert={showAlert}
+                    handleClickOpen={handleClickOpen}
+                    title={"Resultado de busca para '" + name + "'"}
+                  />
+                )}
               </>
             }
           ></Route>

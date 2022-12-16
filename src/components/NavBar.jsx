@@ -18,7 +18,9 @@ const NavBar = ({
   searchFilter,
 }) => {
   const [search, setSearch] = useState("");
-  var totalPrice = 0;
+  const totalPrice = cartShop.reduce((acc, item) => {
+    return acc + item.price;
+  }, 0);
 
   return (
     <header className="NavBar">
@@ -64,21 +66,18 @@ const NavBar = ({
                     <div>
                       {cartShop.map((item) => {
                         const { name, price, size, image, count } = item;
-                        totalPrice += item.price;
                         return (
-                          <div key={item.image} className="itemCart">
-                            <img src={item.image} alt={item.name} />
+                          <div key={image} className="itemCart">
+                            <img src={image[0]} alt={name} />
                             <div className="infoCart">
-                              <h4>{item.name}</h4>
+                              <h4>{name}</h4>
                               <p className="infoPrice">
-                                {item.price.toLocaleString("pt-br", {
+                                {price.toLocaleString("pt-br", {
                                   style: "currency",
                                   currency: "BRL",
                                 })}
                               </p>
-                              <p className="infoQuant">
-                                Quantidade: {item.count}
-                              </p>
+                              <p className="infoQuant">Quantidade: {count}</p>
                             </div>
                             <div className="iconsBtn">
                               <button onClick={() => addItem(item)}>

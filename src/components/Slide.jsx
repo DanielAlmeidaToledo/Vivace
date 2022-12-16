@@ -47,8 +47,8 @@ const Slide = () => {
         {imgSlides.map((item) => {
           const { name, img } = item;
           return (
-            <div className="div-slide" key={item.name}>
-              <img src={item.img} alt={item.name} />
+            <div className="div-slide" key={name}>
+              <img src={item.img} alt={name} />
             </div>
           );
         })}
@@ -58,11 +58,11 @@ const Slide = () => {
         {infos.map((info) => {
           const { title, sub, icon } = info;
           return (
-            <div className="info1" key={info.title}>
-              <div className="iconInfo">{info.icon}</div>
+            <div className="info1" key={title}>
+              <div className="iconInfo">{icon}</div>
               <div>
-                <h3>{info.title}</h3>
-                <span>{info.sub}</span>
+                <h3>{title}</h3>
+                <span className="infoSub">{sub}</span>
               </div>
             </div>
           );

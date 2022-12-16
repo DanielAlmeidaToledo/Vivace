@@ -11,16 +11,16 @@
 
 .info{
     margin: 3rem 0;
-    padding: 0 1rem;
+    padding: 0 3rem 0 1rem;
     width: 100vw;
     background-color: #000;
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .info1{
-    width: 33.33%;
+    width: 30%;
     display: flex;
     padding: 2rem 1rem;
 }
@@ -48,9 +48,10 @@
 
     .info1{
         width: 80%;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         display: flex;
+        margin: 0 auto;
     }
 
     .info1 span{
