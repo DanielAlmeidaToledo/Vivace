@@ -67,7 +67,7 @@ const NavBar = ({
                       {cartShop.map((item) => {
                         const { name, price, size, image, count } = item;
                         return (
-                          <div key={image} className="itemCart">
+                          <div key={size + image} className="itemCart">
                             <img src={image[0]} alt={name} />
                             <div className="infoCart">
                               <h4>{name}</h4>
@@ -81,13 +81,13 @@ const NavBar = ({
                               <p className="infoSize">Tamanho {size}</p>
                             </div>
                             <div className="iconsBtn">
-                              <button onClick={() => addItem(item)}>
+                              <button onClick={() => addItem(item, size)}>
                                 <AiOutlinePlusCircle
                                   className="iconItem"
                                   size={20}
                                 />
                               </button>
-                              <button onClick={() => removeItem(item)}>
+                              <button onClick={() => removeItem(item, size)}>
                                 <AiOutlineMinusCircle
                                   className="iconItem"
                                   size={20}
@@ -106,7 +106,7 @@ const NavBar = ({
                       </p>
                       <a
                         target={"_blank"}
-                        href={`https://api.whatsapp.com/send?phone=5515981813023&text=%E2%9C%A8%20*VIVACE*%20%E2%9C%A8%0A%0AOii,%20tudo%20bem?%20%0AGostei%20desses%20itens%20e%20tenho%20interesse%20em%20comprar:${cartShop.map(
+                        href={`https://api.whatsapp.com/send?phone=5515981813023&text=%E2%9C%A8%20*VIVACE*%20%E2%9C%A8%0A%0AOii,%20%0AGostei%20desses%20itens%20e%20tenho%20interesse%20em%20comprar:${cartShop.map(
                           (item) => {
                             const { name, price, size, image, count } = item;
                             return `%0A%0A*Item:*%20${name}%0A*Tamanho:*%20${size}%0A*Quantidade:*%20${count}%0A*Valor:*%20${price.toLocaleString(

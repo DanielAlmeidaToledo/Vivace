@@ -135,7 +135,7 @@ const products = [
     description:
       "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
     descSize:
-      "📐 Cintura: 72cm, Quadril: 92cm, Cavaco: 34cm, Comprimento: 110cm",
+      "📐 Cintura: 72cm, Quadril: 92cm, Cavalo: 34cm, Comprimento: 110cm",
   },
   {
     id: 12,
@@ -162,7 +162,7 @@ const products = [
     description:
       "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
     descSize:
-      "📐 Cintura: 66cm, Quadril: 92cm, Cavaco: 33cm, Comprimento: 108cm",
+      "📐 Cintura: 66cm, Quadril: 92cm, Cavalo: 33cm, Comprimento: 108cm",
   },
   {
     id: 14,
@@ -209,8 +209,14 @@ function App() {
   function addItem(item, numSize) {
     if (numSize !== "") {
       const nArray = [...cartShop];
-      const nIndex = nArray.findIndex((product) => product.id == item.id);
-      if (nIndex < 0) {
+      const nIndex = nArray.findIndex(
+        (product) => product.id == item.id && product.size == numSize
+      );
+      if (nIndex >= 0) {
+        nArray[nIndex].price += nArray[nIndex].price / nArray[nIndex].count;
+        nArray[nIndex].count += 1;
+        setCartShop(nArray);
+      } else {
         setCartShop([
           ...nArray,
           {
@@ -222,18 +228,16 @@ function App() {
             count: 1,
           },
         ]);
-      } else {
-        nArray[nIndex].price += nArray[nIndex].price / nArray[nIndex].count;
-        nArray[nIndex].count += 1;
-        setCartShop(nArray);
       }
     }
   }
 
   /* Remove item no carrinho de compras */
-  function removeItem(item) {
+  function removeItem(item, numSize) {
     const nArray = [...cartShop];
-    const nIndex = nArray.findIndex((product) => product.id == item.id);
+    const nIndex = nArray.findIndex(
+      (product) => product.id == item.id && product.size == numSize
+    );
     if (nIndex >= 0) {
       nArray[nIndex].price -= nArray[nIndex].price / nArray[nIndex].count;
       nArray[nIndex].count -= 1;
