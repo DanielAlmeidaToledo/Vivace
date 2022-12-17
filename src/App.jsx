@@ -24,7 +24,7 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/bdChiclete.jpg"],
     description:
-      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
+      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
     descSize: "📐 Cintura: 67cm, Busto: 71cm, Comprimento: 71cm",
   },
   {
@@ -35,8 +35,8 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/bdRosado.jpg"],
     description:
-      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
-    descSize: "📐 Cintura: 71cm, Busto: 69cm, Comprimento: 70cm",
+      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "📐 Cintura: 71cm, Busto: 76cm, Comprimento: 68cm",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/bdVerde.jpg"],
     description:
-      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
+      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
     descSize: "📐 Cintura: 69cm, Busto: 69cm, Comprimento: 70cm",
   },
   {
@@ -57,8 +57,8 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/bdPreto.jpg"],
     description:
-      "🧣 Canelado grosso, duplo tecido no busto, 92%poliester, 8% elastano.",
-    descSize: "📐 Cintura: 67cm, Busto: 71cm, Comprimento: 71cm",
+      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "📐 Cintura: 77cm, Busto: 81cm, Comprimento: 73cm",
   },
   {
     id: 5,
@@ -68,8 +68,8 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/cavadoPreto1.jpg", "media/roupas/cavadoPreto2.jpg"],
     description:
-      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
-    descSize: "📐 Busto: 24cm, Comprimento: 26cm",
+      "🧣 Confeccionado em canelado duplo, sem bojo. Costas nuas com cordinha de amarração, cavado.",
+    descSize: "📐 Busto: 27cm, Comprimento: 27cm",
   },
   {
     id: 6,
@@ -79,8 +79,8 @@ const products = [
     categories: ["bodyCropped"],
     image: ["media/roupas/cavadoVermelho.jpg"],
     description:
-      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
-    descSize: "📐 Busto: 27cm, Comprimento: 27cm",
+      "🧣 Confeccionado em canelado duplo, sem bojo. Costas nuas com cordinha de amarração, cavado.",
+    descSize: "📐 Busto: 24cm, Comprimento: 26cm",
   },
   {
     id: 7,
@@ -89,8 +89,7 @@ const products = [
     size: ["P", "M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpReg.jpg"],
-    description:
-      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    description: "🧣 Confeccionado em canelado macio, básico.",
     descSize:
       "📐 Preto P = Busto: 66cm, Comprimento: 38cm; Preto M =  Busto: 72cm, Comprimento: 41cm",
   },
@@ -101,8 +100,7 @@ const products = [
     size: ["P", "M"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpBranco.jpg"],
-    description:
-      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    description: "🧣 Confeccionado em suplex, sem bojo",
     descSize:
       "📐 Branco P = Busto: 69cm, Comprimento: 35cm; Branco M = Busto: 77cm, Comprimento: 38cm",
   },
@@ -113,8 +111,7 @@ const products = [
     size: ["P"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cpPreto.jpg"],
-    description:
-      "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
+    description: "🧣 Confeccionado em suplex, sem bojo",
     descSize: "📐 Busto: 69cm, Comprimento: 35cm",
   },
   {
