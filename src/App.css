@@ -63,21 +63,30 @@ overflow-x: inherit;
     width: 100vw;
     border: none;
   }
-  .filter1{
+  .filterTitle{
+    color: #ff33a7;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1rem 0 0 0;
+  }
+  .filterClose{
     background-color: #fff;
+  }
+  .filter1{
     border-radius: .5rem;
     padding: 1.5rem;
     transition: 1s;
+    text-decoration: none;
   }
-  .filterClose{
+  .filterEsc{
     display: flex;
     color: #ff33a7;
-    background-color: #fff;
     padding: 1rem .5rem;
     font-size: 1.5rem;
     transition: .5s;
     text-decoration: none;
     border: none;
+    border-bottom: 1px solid #ff33a7;
   }
   .PopoverArrow{
     fill: white;

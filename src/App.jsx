@@ -202,32 +202,34 @@ function App() {
   }, 0);
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
+  const [error, setError] = useState(false);
   const [prod, setProd] = useState();
   const [prods, setProds] = useState(products);
   const [isOpenHamb, setOpenHamb] = useState(false);
   const [name, setName] = useState("");
 
   /* Adiciona item no carrinho de compras */
-  function addItem(item) {
-    const nArray = [...cartShop];
-    const nIndex = nArray.findIndex((product) => product.id == item.id);
-    if (nIndex < 0) {
-      setCartShop([
-        ...nArray,
-        {
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          size: item.size,
-          image: item.image,
-          count: 1,
-        },
-      ]);
-    } else {
-      nArray[nIndex].price += nArray[nIndex].price / nArray[nIndex].count;
-      nArray[nIndex].count += 1;
-      setCartShop(nArray);
-      console.log(cartShop);
+  function addItem(item, numSize) {
+    if (numSize !== "") {
+      const nArray = [...cartShop];
+      const nIndex = nArray.findIndex((product) => product.id == item.id);
+      if (nIndex < 0) {
+        setCartShop([
+          ...nArray,
+          {
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            size: numSize,
+            image: item.image,
+            count: 1,
+          },
+        ]);
+      } else {
+        nArray[nIndex].price += nArray[nIndex].price / nArray[nIndex].count;
+        nArray[nIndex].count += 1;
+        setCartShop(nArray);
+      }
     }
   }
 
@@ -246,11 +248,18 @@ function App() {
   }
 
   /* Alerta de adição de itens no carrinho */
-  const showAlert = () => {
-    setOpen(true);
-    setTimeout(() => {
-      setOpen(false);
-    }, 3000);
+  const showAlert = (numSize) => {
+    if (numSize !== "") {
+      setOpen(true);
+      setTimeout(() => {
+        setOpen(false);
+      }, 3000);
+    } else {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 3000);
+    }
   };
 
   const handleClickOpen = (item) => {
@@ -283,7 +292,7 @@ function App() {
       <BrowserRouter>
         <div className="filter">
           <Link className="filterLink" to="/">
-            Todos os Produtos
+            Todos os produtos
           </Link>
           <Link className="filterLink" to="/body-cropped">
             Body / Cropped
@@ -302,28 +311,24 @@ function App() {
           </Popover.Trigger>
           <Popover.Portal>
             <Popover.Content className="PopoverContent">
-              <div className="filter1">
-                <Link to="/">
-                  <Popover.Close className="filterClose" aria-label="Close">
-                    ● Todos os Produtos
-                  </Popover.Close>
-                </Link>
-                <Link to="/body-cropped">
-                  <Popover.Close className="filterClose" aria-label="Close">
+              <Popover.Close className="filterClose" aria-label="Close">
+                <h3 className="filterTitle">Categorias</h3>
+                <div className="filter1">
+                  <Link to="/" className="filterEsc">
+                    ● Todos os produtos
+                  </Link>
+                  <Link to="/body-cropped" className="filterEsc">
                     ● Body / Cropped
-                  </Popover.Close>
-                </Link>
-                <Link to="/calças-saias">
-                  <Popover.Close className="filterClose" aria-label="Close">
+                  </Link>
+                  <Link to="/calças-saias" className="filterEsc">
                     ● Calças / Saias
-                  </Popover.Close>
-                </Link>
-                <Link to="/vestidos">
-                  <Popover.Close className="filterClose" aria-label="Close">
+                  </Link>
+                  <Link to="/vestidos" className="filterEsc">
                     ● Vestidos
-                  </Popover.Close>
-                </Link>
-              </div>
+                  </Link>
+                </div>
+              </Popover.Close>
+
               <Popover.Arrow className="PopoverArrow" />
             </Popover.Content>
           </Popover.Portal>
@@ -392,6 +397,12 @@ function App() {
             }
           ></Route>
         </Routes>
+
+        {error && (
+          <Alert className="alertAdd" variant="filled" severity="error">
+            Informe um tamanho
+          </Alert>
+        )}
 
         {open && (
           <Alert className="alertAdd" variant="filled" severity="success">

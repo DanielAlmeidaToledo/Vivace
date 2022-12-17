@@ -8,6 +8,7 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
       <h2 className="titleProducts">{title}</h2>
       {products.map((item) => {
         const { name, price, size, image } = item;
+        let numSize = "";
         return (
           <div className="item" key={name}>
             <button
@@ -27,7 +28,12 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
               <div>
                 {size.map((num) => {
                   return (
-                    <button className="numSize" key={num} value={num} href="">
+                    <button
+                      onClick={() => (numSize = num)}
+                      className="numSize"
+                      key={num}
+                      value={numSize}
+                    >
                       {num}
                     </button>
                   );
@@ -37,8 +43,8 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
             <button
               className="addCart"
               onClick={() => {
-                addItem(item);
-                showAlert();
+                addItem(item, numSize);
+                showAlert(numSize);
               }}
             >
               <span>Adicionar</span>

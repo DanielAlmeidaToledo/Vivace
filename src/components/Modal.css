@@ -56,6 +56,10 @@
     margin-bottom: .7rem;
 }
 
+.descTitle span{
+    text-align: start;
+}
+
 .photoSlider{
     width: 50vw;
     display: flex;
@@ -69,8 +73,6 @@
     margin: 0 31rem 2rem auto;
     overflow: hidden;
 }
-
-
 
 .modalImg1{
     width: 100vw;

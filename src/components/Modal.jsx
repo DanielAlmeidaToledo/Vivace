@@ -122,6 +122,7 @@ const Modal = ({ item, open, handleClose, addItem, showAlert }) => {
                 <span>
                   {item.description}
                   <br />
+                  <br />
                   {item.descSize}
                 </span>
               </div>

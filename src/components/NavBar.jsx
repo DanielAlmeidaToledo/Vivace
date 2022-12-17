@@ -78,6 +78,7 @@ const NavBar = ({
                                 })}
                               </p>
                               <p className="infoQuant">Quantidade: {count}</p>
+                              <p className="infoSize">Tamanho {size}</p>
                             </div>
                             <div className="iconsBtn">
                               <button onClick={() => addItem(item)}>

@@ -73,12 +73,14 @@
 /* RESPONSIVE */
 
 @media (max-width: 710px){
-    .footer-2 div{
+    .footer-info{
         display: block;
     }
-    .footer-2 a{
-        display: flex;
-        justify-content: center;
-        margin: 4rem 0;
+    .footer-1, .footer-2{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-2 div{
+        padding: 1rem 0;
     }
 }

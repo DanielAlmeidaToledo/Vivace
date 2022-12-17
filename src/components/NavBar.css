@@ -106,8 +106,8 @@
     color: #fff;
     background: #ff99c967;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: .9rem;
+    right: 1.5rem;
 }
 
 .cartClose:hover{
@@ -160,6 +160,11 @@
 }
 
 .infoQuant{
+    font-size: .8rem;
+    padding-bottom: .3rem;
+}
+
+.infoSize{
     font-size: .8rem;
     padding-bottom: 1rem;
 }
