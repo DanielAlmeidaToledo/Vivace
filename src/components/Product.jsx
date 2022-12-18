@@ -1,13 +1,14 @@
 import './Product.css'
 
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { FaSadCry } from "react-icons/fa";
 
 const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
   return (
     <main className="items">
       <h2 className="titleProducts">{title}</h2>
       {products.map((item) => {
-        const { name, price, size, image } = item;
+        const { name, price, size, image, quant } = item;
         let numSize = "";
         return (
           <div className="item" key={name}>
@@ -40,16 +41,23 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
                 })}
               </div>
             </div>
-            <button
-              className="addCart"
-              onClick={() => {
-                addItem(item, numSize);
-                showAlert(numSize);
-              }}
-            >
-              <span>Adicionar</span>
-              <MdOutlineAddShoppingCart size={25} className="iconAdd" />
-            </button>
+            {quant === 0 ? (
+              <button className="addCart addEsgotado">
+                <span>Esgotado</span>
+                <FaSadCry size={25} className="iconAdd" />
+              </button>
+            ) : (
+              <button
+                className="addCart"
+                onClick={() => {
+                  addItem(item, numSize);
+                  showAlert(numSize);
+                }}
+              >
+                <span>Adicionar</span>
+                <MdOutlineAddShoppingCart size={25} className="iconAdd" />
+              </button>
+            )}
           </div>
         );
       })}

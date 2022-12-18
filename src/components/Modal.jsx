@@ -15,6 +15,7 @@ import Slide from "@mui/material/Slide";
 import Slider from "react-slick";
 
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { FaSadCry } from "react-icons/fa";
 
 import "./Modal.css";
 
@@ -25,6 +26,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const Modal = ({ item, open, handleClose, addItem, showAlert }) => {
   const imgPhotos = item.image;
   const sizeDisp = item.size;
+  let numSize = "";
 
   const settings = {
     customPaging: (i) => {
@@ -94,7 +96,13 @@ const Modal = ({ item, open, handleClose, addItem, showAlert }) => {
                 Tamanhos:
                 {sizeDisp.map((num) => {
                   return (
-                    <button className="numSize" key={num} value={num} href="">
+                    <button
+                      onClick={() => (numSize = num)}
+                      className="numSize"
+                      key={num}
+                      value={num}
+                      href=""
+                    >
                       {num}
                     </button>
                   );
@@ -106,17 +114,23 @@ const Modal = ({ item, open, handleClose, addItem, showAlert }) => {
                   currency: "BRL",
                 })}
               </p>
-              <button
-                className="addCart"
-                onClick={() => {
-                  addItem(item);
-                  showAlert();
-                  handleClose();
-                }}
-              >
-                <span>Adicionar</span>
-                <MdOutlineAddShoppingCart size={25} className="iconAdd" />
-              </button>
+              {item.quant === 0 ? (
+                <button className="addCart addEsgotado">
+                  <span>Esgotado</span>
+                  <FaSadCry size={25} className="iconAdd" />
+                </button>
+              ) : (
+                <button
+                  className="addCart"
+                  onClick={() => {
+                    addItem(item, numSize);
+                    showAlert(numSize);
+                  }}
+                >
+                  <span>Adicionar</span>
+                  <MdOutlineAddShoppingCart size={25} className="iconAdd" />
+                </button>
+              )}
               <div className="modalDesc">
                 <h3 className="descTitle">Descrição</h3>
                 <span>

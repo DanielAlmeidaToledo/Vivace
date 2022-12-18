@@ -82,6 +82,16 @@
     border: 2px solid #FF99C8;
 }
 
+.addEsgotado{
+    background: #ffc6e1;
+    cursor: auto;
+}
+
+.addEsgotado:hover{
+    background: #ffd2e7;
+    color: #fff;
+}
+
 .iconAdd{
     margin-left: .5rem;
 }
