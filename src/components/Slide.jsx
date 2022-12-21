@@ -26,7 +26,7 @@ const Slide = () => {
   const infos = [
     {
       title: "Pagamentos",
-      sub: "Pix, Dinheiro e Depósitos.",
+      sub: "Pix, Débito e Crédito.",
       icon: <MdOutlinePayments size={50} className="icon" />,
     },
     {
