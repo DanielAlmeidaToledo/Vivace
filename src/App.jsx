@@ -29,42 +29,6 @@ const products = [
     descSize: "📐 Cintura: 67cm, Busto: 71cm, Comprimento: 71cm",
   },
   {
-    id: 2,
-    name: "Body Bege",
-    price: 39.9,
-    quant: 0,
-    size: ["M"],
-    categories: ["bodyCropped"],
-    image: ["media/roupas/bdRosado.jpg"],
-    description:
-      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
-    descSize: "📐 Cintura: 71cm, Busto: 76cm, Comprimento: 68cm",
-  },
-  {
-    id: 3,
-    name: "Body Verde Esmeralda",
-    price: 39.9,
-    quant: 0,
-    size: ["P"],
-    categories: ["bodyCropped"],
-    image: ["media/roupas/bdVerde.jpg"],
-    description:
-      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
-    descSize: "📐 Cintura: 69cm, Busto: 69cm, Comprimento: 70cm",
-  },
-  {
-    id: 4,
-    name: "Body Preto",
-    price: 39.9,
-    quant: 0,
-    size: ["G"],
-    categories: ["bodyCropped"],
-    image: ["media/roupas/bdPreto.jpg"],
-    description:
-      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
-    descSize: "📐 Cintura: 77cm, Busto: 81cm, Comprimento: 73cm",
-  },
-  {
     id: 5,
     name: "Cropped Cavado Preto",
     price: 22.9,
@@ -75,18 +39,6 @@ const products = [
     description:
       "🧣 Confeccionado em canelado duplo, sem bojo. Costas nuas com cordinha de amarração, cavado.",
     descSize: "📐 Busto: 27cm, Comprimento: 27cm",
-  },
-  {
-    id: 6,
-    name: "Cropped Cavado Vermelho",
-    price: 22.9,
-    quant: 0,
-    size: ["P"],
-    categories: ["bodyCropped"],
-    image: ["media/roupas/cavadoVermelho.jpg"],
-    description:
-      "🧣 Confeccionado em canelado duplo, sem bojo. Costas nuas com cordinha de amarração, cavado.",
-    descSize: "📐 Busto: 24cm, Comprimento: 26cm",
   },
   {
     id: 7,
@@ -149,6 +101,66 @@ const products = [
       "📐 Cintura: 72cm, Quadril: 92cm, Cavalo: 34cm, Comprimento: 110cm",
   },
   {
+    id: 14,
+    name: "Saia Rosa",
+    price: 46.9,
+    quant: 1,
+    size: ["P"],
+    categories: ["calcaSaia"],
+    image: ["media/roupas/saia.jpg"],
+    description:
+      "🧣 Tecido crepe, 90% poliéster, 10% elastano. Com zíper atrás.",
+    descSize: "📐 Cintura: 72cm, Quadril: 92cm, Comprimento: 39cm",
+  },
+  {
+    id: 2,
+    name: "Body Bege",
+    price: 39.9,
+    quant: 0,
+    size: ["M"],
+    categories: ["bodyCropped"],
+    image: ["media/roupas/bdRosado.jpg"],
+    description:
+      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "📐 Cintura: 71cm, Busto: 76cm, Comprimento: 68cm",
+  },
+  {
+    id: 3,
+    name: "Body Verde Esmeralda",
+    price: 39.9,
+    quant: 0,
+    size: ["P"],
+    categories: ["bodyCropped"],
+    image: ["media/roupas/bdVerde.jpg"],
+    description:
+      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "📐 Cintura: 69cm, Busto: 69cm, Comprimento: 70cm",
+  },
+  {
+    id: 4,
+    name: "Body Preto",
+    price: 39.9,
+    quant: 0,
+    size: ["G"],
+    categories: ["bodyCropped"],
+    image: ["media/roupas/bdPreto.jpg"],
+    description:
+      "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
+    descSize: "📐 Cintura: 77cm, Busto: 81cm, Comprimento: 73cm",
+  },
+  {
+    id: 6,
+    name: "Cropped Cavado Vermelho",
+    price: 22.9,
+    quant: 0,
+    size: ["P"],
+    categories: ["bodyCropped"],
+    image: ["media/roupas/cavadoVermelho.jpg"],
+    description:
+      "🧣 Confeccionado em canelado duplo, sem bojo. Costas nuas com cordinha de amarração, cavado.",
+    descSize: "📐 Busto: 24cm, Comprimento: 26cm",
+  },
+  {
     id: 12,
     name: "Vestido Curto Com Fenda",
     price: 49.9,
@@ -176,18 +188,6 @@ const products = [
       "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
     descSize:
       "📐 Cintura: 66cm, Quadril: 92cm, Cavalo: 33cm, Comprimento: 108cm",
-  },
-  {
-    id: 14,
-    name: "Saia Rosa",
-    price: 46.9,
-    quant: 1,
-    size: ["P"],
-    categories: ["calcaSaia"],
-    image: ["media/roupas/saia.jpg"],
-    description:
-      "🧣 Tecido crepe, 90% poliéster, 10% elastano. Com zíper atrás.",
-    descSize: "📐 Cintura: 72cm, Quadril: 92cm, Comprimento: 39cm",
   },
 ];
 
