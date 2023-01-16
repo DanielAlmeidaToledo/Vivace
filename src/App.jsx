@@ -41,18 +41,6 @@ const products = [
     descSize: "📐 Busto: 27cm, Comprimento: 27cm",
   },
   {
-    id: 7,
-    name: "Cropped Regata Preto",
-    price: 26.9,
-    quant: 1,
-    size: ["M"],
-    categories: ["bodyCropped"],
-    image: ["media/roupas/cpReg.jpg"],
-    description: "🧣 Confeccionado em canelado macio, básico.",
-    descSize:
-      "📐 Preto P = Busto: 66cm, Comprimento: 38cm; Preto M =  Busto: 72cm, Comprimento: 41cm",
-  },
-  {
     id: 8,
     name: "Cropped Trançado Branco",
     price: 43.9,
@@ -99,18 +87,6 @@ const products = [
       "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
     descSize:
       "📐 Cintura: 72cm, Quadril: 92cm, Cavalo: 34cm, Comprimento: 110cm",
-  },
-  {
-    id: 14,
-    name: "Saia Rosa",
-    price: 46.9,
-    quant: 1,
-    size: ["P"],
-    categories: ["calcaSaia"],
-    image: ["media/roupas/saia.jpg"],
-    description:
-      "🧣 Tecido crepe, 90% poliéster, 10% elastano. Com zíper atrás.",
-    descSize: "📐 Cintura: 72cm, Quadril: 92cm, Comprimento: 39cm",
   },
   {
     id: 2,
@@ -161,6 +137,18 @@ const products = [
     descSize: "📐 Busto: 24cm, Comprimento: 26cm",
   },
   {
+    id: 7,
+    name: "Cropped Regata Preto",
+    price: 26.9,
+    quant: 0,
+    size: ["M"],
+    categories: ["bodyCropped"],
+    image: ["media/roupas/cpReg.jpg"],
+    description: "🧣 Confeccionado em canelado macio, básico.",
+    descSize:
+      "📐 Preto P = Busto: 66cm, Comprimento: 38cm; Preto M =  Busto: 72cm, Comprimento: 41cm",
+  },
+  {
     id: 12,
     name: "Vestido Curto Com Fenda",
     price: 49.9,
@@ -188,6 +176,18 @@ const products = [
       "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
     descSize:
       "📐 Cintura: 66cm, Quadril: 92cm, Cavalo: 33cm, Comprimento: 108cm",
+  },
+  {
+    id: 14,
+    name: "Saia Rosa",
+    price: 46.9,
+    quant: 0,
+    size: ["P"],
+    categories: ["calcaSaia"],
+    image: ["media/roupas/saia.jpg"],
+    description:
+      "🧣 Tecido crepe, 90% poliéster, 10% elastano. Com zíper atrás.",
+    descSize: "📐 Cintura: 72cm, Quadril: 92cm, Comprimento: 39cm",
   },
 ];
 
