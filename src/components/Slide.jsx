@@ -1,6 +1,6 @@
-import {MdOutlinePayments} from 'react-icons/md'
-import {TbTruckDelivery} from 'react-icons/tb'
-import {FaLaptopHouse} from 'react-icons/fa'
+import { MdOutlinePayments } from "react-icons/md";
+import { TbTruckDelivery } from "react-icons/tb";
+import { FaLaptopHouse } from "react-icons/fa";
 import Slider from "react-slick";
 
 import "./Slide.css";
@@ -19,8 +19,9 @@ const Slide = () => {
   };
 
   const imgSlides = [
-    { name: "Imagem 1 - Slide", img: "/media/slide/Slide1.png" },
-    { name: "Imagem 2 - Slide", img: "/media/slide/Slide2.png" },
+    { name: "Imagem 1 - Slide", img: "/media/slide/Slide3.png" },
+    { name: "Imagem 2 - Slide", img: "/media/slide/Slide1.png" },
+    { name: "Imagem 3 - Slide", img: "/media/slide/Slide2.png" },
   ];
 
   const infos = [
@@ -48,7 +49,7 @@ const Slide = () => {
           const { name, img } = item;
           return (
             <div className="div-slide" key={name}>
-              <img src={item.img} alt={name} />
+              <img src={img} alt={name} />
             </div>
           );
         })}
@@ -58,7 +59,7 @@ const Slide = () => {
         {infos.map((info) => {
           const { title, sub, icon } = info;
           return (
-            <div className="info1" key={title}>
+            <div className="infoDiv" key={title}>
               <div className="iconInfo">{icon}</div>
               <div>
                 <h3>{title}</h3>
@@ -72,4 +73,4 @@ const Slide = () => {
   );
 };
 
-export default Slide
+export default Slide;
