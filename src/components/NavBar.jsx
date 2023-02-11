@@ -1,6 +1,6 @@
-import { FaSearch } from 'react-icons/fa'
-import { MdShoppingCart } from 'react-icons/md'
-import { AiOutlineClose } from 'react-icons/ai'
+import { FaSearch } from "react-icons/fa";
+import { MdShoppingCart } from "react-icons/md";
+import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 import * as Popover from "@radix-ui/react-popover";
 
@@ -138,4 +138,4 @@ const NavBar = ({
   );
 };
 
-export default NavBar
+export default NavBar;

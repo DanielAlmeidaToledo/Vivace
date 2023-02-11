@@ -1,86 +1,88 @@
-.footer{
-    width: 100%;
-    background: #000;
+.footer {
+  width: 100%;
+  background: #000;
 }
 
-.footer-logo{
-    width: 12rem;
-    display: flex;
-    margin: 0 auto;
+.footer-logo {
+  width: 12rem;
+  display: flex;
+  margin: 0 auto;
 }
 
-.footer-hr{
-    width: 90%;
-    margin: 0 auto;
+.footer-hr {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.footer-info{
-    display: flex;
-    justify-content: space-evenly;
+.footer-info {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.footer-1 , .footer-2{
-    width: 40%;
-    height: 100%;
-    display: flexbox;
-    text-align: center;
-    color: #fff;
-    padding: 0 0 3rem 0;
+.footer-1,
+.footer-2 {
+  width: 40%;
+  height: 100%;
+  display: flexbox;
+  text-align: center;
+  color: #fff;
+  padding: 0 0 3rem 0;
 }
 
-.footer-1{
-    float: left;
+.footer-1 {
+  float: left;
 }
-.footer-2{
-    float: right;
-}
-
-.footer-2 div{
-    display: flex;
-    padding: 2rem 0;
-    justify-content: center;
-    align-items: center;
+.footer-2 {
+  float: right;
 }
 
-.footer-2 a{
-    color: white;
-    margin: 0rem 2rem;
-    transition: .3s;
+.footer-2 div {
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-2 a:hover{
-    color: #FF99C8;
+.footer-2 a {
+  color: white;
+  margin: 0rem 2rem;
+  transition: 0.3s;
 }
 
-.footer-info h2{
-    padding: 1rem 0 2rem;
+.footer-2 a:hover {
+  color: #ff99c8;
 }
 
-.devAutor{
-    font-size: .8rem;
-    width: 100%;
-    text-align: center;
-    color: rgb(220, 220, 220);
-    padding: .3rem 0;
+.footer-info h2 {
+  padding: 1rem 0 2rem;
 }
 
-.devAutor a{
-    text-decoration: none;
-    color: rgb(220, 220, 220);
-    font-weight: bold;
+.devAutor {
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+  color: rgb(220, 220, 220);
+  padding: 0.3rem 0;
+}
+
+.devAutor a {
+  text-decoration: none;
+  color: rgb(220, 220, 220);
+  font-weight: bold;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 710px){
-    .footer-info{
-        display: block;
-    }
-    .footer-1, .footer-2{
-        width: 100%;
-        text-align: center;
-    }
-    .footer-2 div{
-        padding: 1rem 0;
-    }
+@media (max-width: 710px) {
+  .footer-info {
+    display: block;
+  }
+  .footer-1,
+  .footer-2 {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-2 div {
+    padding: 1rem 0;
+  }
 }

@@ -1,102 +1,104 @@
-.modalTopo{
-    width: 100%;
-    background: #FF99C8;
+.modalTopo {
+  width: 100%;
+  background: #ff99c8;
 }
 
-.modalTitle{
+.modalTitle {
+  text-align: center;
+}
+
+.modalBtn:hover {
+  color: #ff499e;
+}
+
+.modalContent {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalImg {
+  width: 33vw;
+  height: 80vh;
+  border-radius: 0.5rem;
+  display: flex;
+  margin: 0 auto;
+}
+
+.modalInfo {
+  width: 50vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mfTitle,
+.mfSize,
+.mfPrice {
+  width: 100%;
+}
+
+.mfTitle {
+  font-size: 1.8rem;
+}
+
+.mfPrice {
+  font-size: 1.5rem;
+}
+
+.modalDesc {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.descTitle {
+  margin-bottom: 0.7rem;
+}
+
+.descTitle span {
+  text-align: start;
+}
+
+.photoSlider {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-thumb {
+  display: flex;
+  width: 7%;
+  margin: 0 31rem 2rem auto;
+  overflow: hidden;
+}
+
+.modalImg1 {
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media (max-width: 710px) {
+  .modalContent {
+    display: block;
     text-align: center;
-}
-
-.modalBtn:hover{
-    color: #ff499e;
-}
-
-.modalContent{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.modalImg{
-    width: 33vw;
-    height: 80vh;
-    border-radius: .5rem;
-    display: flex;
-    margin: 0 auto;
-}
-
-.modalInfo{
-    width: 50vw;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.mfTitle, .mfSize, .mfPrice{
-    width: 100%;
-}
-
-.mfTitle{
-    font-size: 1.8rem;
-}
-
-.mfPrice{
-    font-size: 1.5rem;
-}
-
-.modalDesc{
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.descTitle{
-    margin-bottom: .7rem;
-}
-
-.descTitle span{
-    text-align: start;
-}
-
-.photoSlider{
-    width: 50vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slick-thumb{
-    display: flex; 
-    width: 7%;
-    margin: 0 31rem 2rem auto;
-    overflow: hidden;
-}
-
-.modalImg1{
+  }
+  .photoSlider {
     width: 100vw;
-    overflow: hidden;
-}
-
-@media (max-width: 710px){
-    .modalContent{
-        display: block;
-        text-align: center;
-    }
-    .photoSlider{
-        width: 100vw;
-    }
-    .modalImg{
-        width: 80vw;
-        height: 60vh;
-        border-radius: .5rem;
-        display: flex;
-        margin: 0 auto;
-    }
-    .modalInfo{
-        width: 100%;
-        margin-top: 1rem;
-        text-align: center;
-    }
+  }
+  .modalImg {
+    width: 80vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    display: flex;
+    margin: 0 auto;
+  }
+  .modalInfo {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
 }
