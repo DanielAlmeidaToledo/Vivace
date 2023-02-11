@@ -1,106 +1,106 @@
-.titleProducts{
-    width: 100%;
-    text-align: center;
-    margin: 1rem 0 0 0;
+.titleProducts {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0 0 0;
 }
 
-.items{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.item{
-    margin: 1.5rem;
-    text-align: start;
+.item {
+  margin: 1.5rem;
+  text-align: start;
 }
 
-.item img{
-    cursor: pointer;
-    width: 20rem;
-    height: 27rem;
-    border-radius: .2rem;
+.item img {
+  cursor: pointer;
+  width: 20rem;
+  height: 27rem;
+  border-radius: 0.2rem;
 }
 
-.btnProduct{
-    border: none;
-    background: none;
+.btnProduct {
+  border: none;
+  background: none;
 }
 
-.item p{
-    padding: .3rem 0 .7rem;
-    text-align: center;
+.item p {
+  padding: 0.3rem 0 0.7rem;
+  text-align: center;
 }
 
-.infos{
-    display: flex;
-    justify-content: space-around;
+.infos {
+  display: flex;
+  justify-content: space-around;
 }
 
-.numSize{
-    text-decoration: none;
-    color: #000;
-    padding: .3rem .5rem;
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: .3rem;
-    cursor: pointer;
-    margin: 0 .3rem;
-    transition: .3s;
+.numSize {
+  text-decoration: none;
+  color: #000;
+  padding: 0.3rem 0.5rem;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 0 0.3rem;
+  transition: 0.3s;
 }
 
-.numSize:focus{
-    color: #fff;
-    background-color: #000;
-    border: 1px solid #000;
+.numSize:focus {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
 }
 
-.addCart{
-    font-size: 1.2rem;
-    width: 10rem;
-    padding: .5rem .8rem;
-    background: #FF99C8;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    border-radius: .2rem;
-    border: none;
-    filter: .5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: .7rem auto 0;
-    border: 2px solid #FF99C8;
-    transition: .4s;
+.addCart {
+  font-size: 1.2rem;
+  width: 10rem;
+  padding: 0.5rem 0.8rem;
+  background: #ff99c8;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  border: none;
+  filter: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.7rem auto 0;
+  border: 2px solid #ff99c8;
+  transition: 0.4s;
 }
 
-.addCart:hover{
-    filter: saturate(1.3);
-    background: none;
-    color: #FF99C8;
-    border: 2px solid #FF99C8;
+.addCart:hover {
+  filter: saturate(1.3);
+  background: none;
+  color: #ff99c8;
+  border: 2px solid #ff99c8;
 }
 
-.addEsgotado{
-    background: #ffc6e1;
-    cursor: auto;
+.addEsgotado {
+  background: #ffc6e1;
+  cursor: auto;
 }
 
-.addEsgotado:hover{
-    background: #ffd2e7;
-    color: #fff;
+.addEsgotado:hover {
+  background: #ffd2e7;
+  color: #fff;
 }
 
-.iconAdd{
-    margin-left: .5rem;
+.iconAdd {
+  margin-left: 0.5rem;
 }
 
-.naoEncontrado{
-    font-size: 1.3rem;
-    margin: 8rem 0;
-    color: #FF99C8;
+.naoEncontrado {
+  font-size: 1.3rem;
+  margin: 8rem 0;
+  color: #ff99c8;
 }
 
-@media (max-width: 710px){ 
+@media (max-width: 710px) {
 }

@@ -1,4 +1,4 @@
-import './Product.css'
+import "./Product.css";
 
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { FaSadCry } from "react-icons/fa";
@@ -68,4 +68,4 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
   );
 };
 
-export default Product
+export default Product;
