@@ -49,6 +49,7 @@ html body {
 @media (max-width: 710px) {
   .filter {
     display: none;
+    background: red;
   }
   .alertAdd {
     display: flex;
@@ -59,10 +60,11 @@ html body {
     display: flex;
     justify-content: center;
     padding: 0.5rem 1rem;
-    background-color: #000;
+    background: #202020;
     width: 100vw;
     border: none;
   }
+
   .filterTitle {
     color: #ff33a7;
     font-weight: bold;
