@@ -92,7 +92,7 @@ const products = [
       "media/roupas/vestFlor3.JPG",
     ],
     description: "🧣 Vestido florido longo, cor azul escuro.",
-    descSize: "📐 Tamanho único.",
+    descSize: "📐 Tamanho único, veste de P até M.",
   },
   {
     id: 16,
@@ -107,7 +107,7 @@ const products = [
       "media/roupas/vestVerde3.JPG",
     ],
     description: "🧣 Vestido longo, cor verde tiffany.",
-    descSize: "📐 Tamanho único.",
+    descSize: "📐 Tamanho único, veste de P até G.",
   },
   {
     id: 21,
@@ -121,7 +121,7 @@ const products = [
       "media/roupas/calcaPretaNew2.jpg",
     ],
     description: "🧣 Calça pantalona na cor preta.",
-    descSize: "📐 Tamanho único.",
+    descSize: "📐 Tamanho único, veste de M até G.",
   },
   {
     id: 21,
@@ -132,7 +132,7 @@ const products = [
     categories: ["calcaSaia", "novidades"],
     image: ["media/roupas/calcaNewAzul.jpg"],
     description: "🧣 Calça pantalona na cor azul.",
-    descSize: "📐 Tamanho único.",
+    descSize: "📐 Tamanho único, veste de P até G.",
   },
   {
     id: 1,
