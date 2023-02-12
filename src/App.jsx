@@ -47,7 +47,7 @@ const products = [
     descSize: "📐 Tamanho M disponível.",
   },
   {
-    id: 17,
+    id: 23,
     name: "Cropped Verde Tricot",
     price: 59.9,
     quant: 1,
@@ -124,7 +124,7 @@ const products = [
     descSize: "📐 Tamanho único, veste de M até G.",
   },
   {
-    id: 21,
+    id: 22,
     name: "Calça Azul Pantalona",
     price: 74.9,
     quant: 1,
