@@ -10,6 +10,7 @@
 .div-slide img {
   width: 100vw;
   height: 100%;
+  margin: auto;
   display: flex;
 }
 
@@ -17,24 +18,24 @@
   margin: -0.3rem 0 2rem;
   padding: 0 3rem 0 1rem;
   width: 100vw;
-  background-color: #000;
+  background-color: #202020;
   color: #fff;
   display: flex;
   justify-content: space-around;
 }
 
 .infoDiv {
-  width: 25%;
+  width: 23%;
   display: flex;
   padding: 2rem 1rem;
 }
 
 .infoDiv h3 {
-  padding: 0.7rem 0;
+  padding: 0.5rem 0;
 }
 
 .iconInfo {
-  width: 20%;
+  width: 6rem;
 }
 
 @media (max-width: 640px) {
@@ -55,7 +56,7 @@
     margin: 0 auto;
   }
 
-  .infoDiv span {
+  .infoSub {
     display: flex;
     width: 75%;
   }

@@ -23,6 +23,11 @@
   border-radius: 0.2rem;
 }
 
+.imgProduct {
+  -webkit-transition: all 10s;
+  transition: all 10s;
+}
+
 .btnProduct {
   border: none;
   background: none;

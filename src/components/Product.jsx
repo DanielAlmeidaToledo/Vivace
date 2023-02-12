@@ -16,7 +16,17 @@ const Product = ({ products, addItem, showAlert, handleClickOpen, title }) => {
               className="btnProduct"
               onClick={() => handleClickOpen(item)}
             >
-              <img src={image[0]} alt="" />
+              <img
+                src={image[0]}
+                onMouseOver={
+                  image.length > 1
+                    ? (e) => (e.currentTarget.src = image[1])
+                    : null
+                }
+                onMouseOut={(e) => (e.currentTarget.src = image[0])}
+                alt={name}
+                className="imgProduct"
+              />
             </button>
             <p>{name}</p>
             <div className="infos">

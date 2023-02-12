@@ -22,13 +22,13 @@ const products = [
     price: 59.9,
     quant: 1,
     size: ["G"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "novidades"],
     image: [
       "media/roupas/cpCig1.JPG",
       "media/roupas/cpCig2.JPG",
       "media/roupas/cpCig3.JPG",
     ],
-    description: "🧣 Cropped Ciganinha Marsala.",
+    description: "🧣 Cropped Ciganinha Marsala (Com bojo).",
     descSize: "📐 Tamanho G disponível.",
   },
   {
@@ -37,13 +37,13 @@ const products = [
     price: 59.9,
     quant: 1,
     size: ["M"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "novidades"],
     image: [
       "media/roupas/cpCigV1.JPG",
       "media/roupas/cpCigV2.JPG",
       "media/roupas/cpCigV3.JPG",
     ],
-    description: "🧣 Cropped Ciganinha Marsala.",
+    description: "🧣 Cropped Ciganinha Marsala (Com bojo).",
     descSize: "📐 Tamanho M disponível.",
   },
   {
@@ -52,7 +52,7 @@ const products = [
     price: 59.9,
     quant: 1,
     size: ["Único"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "novidades"],
     image: ["media/roupas/cpVerde.jpg"],
     description: "🧣 Cropped verde confeccionado em Tricot.",
     descSize: "📐 Tamanho único, veste de P até G.",
@@ -63,7 +63,7 @@ const products = [
     price: 59.9,
     quant: 1,
     size: ["Único"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "novidades"],
     image: ["media/roupas/cpAzul.JPG"],
     description: "🧣 Cropped azul confeccionado em Tricot.",
     descSize: "📐 Tamanho único, veste de M até GG.",
@@ -74,7 +74,7 @@ const products = [
     price: 59.9,
     quant: 1,
     size: ["Único"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "novidades"],
     image: ["media/roupas/cpRosa2.jpg", "media/roupas/cpRosa1.jpg"],
     description: "🧣 Cropped pink confeccionado em Tricot.",
     descSize: "📐 Tamanho único, veste de P até G.",
@@ -85,7 +85,7 @@ const products = [
     price: 119.9,
     quant: 1,
     size: ["Único"],
-    categories: ["vestido"],
+    categories: ["vestido", "novidades"],
     image: [
       "media/roupas/vestFlor1.JPG",
       "media/roupas/vestFlor2.JPG",
@@ -100,7 +100,7 @@ const products = [
     price: 119.9,
     quant: 1,
     size: ["Único"],
-    categories: ["vestido"],
+    categories: ["vestido", "novidades"],
     image: [
       "media/roupas/vestVerde1.JPG",
       "media/roupas/vestVerde2.JPG",
@@ -115,7 +115,7 @@ const products = [
     price: 74.9,
     quant: 1,
     size: ["Único"],
-    categories: ["calcaSaia"],
+    categories: ["calcaSaia", "novidades"],
     image: [
       "media/roupas/calcaPretaNew1.jpg",
       "media/roupas/calcaPretaNew2.jpg",
@@ -129,7 +129,7 @@ const products = [
     price: 74.9,
     quant: 1,
     size: ["Único"],
-    categories: ["calcaSaia"],
+    categories: ["calcaSaia", "novidades"],
     image: ["media/roupas/calcaNewAzul.jpg"],
     description: "🧣 Calça pantalona na cor azul.",
     descSize: "📐 Tamanho único.",
@@ -199,7 +199,7 @@ const products = [
     price: 79.9,
     quant: 1,
     size: ["M"],
-    categories: ["calcaSaia"],
+    categories: ["calcaSaia", "queridinhos"],
     image: ["media/roupas/calcaPreta.jpg"],
     description:
       "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
@@ -212,7 +212,7 @@ const products = [
     price: 39.9,
     quant: 0,
     size: ["M"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "queridinhos"],
     image: ["media/roupas/bdRosado.jpg"],
     description:
       "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
@@ -224,7 +224,7 @@ const products = [
     price: 39.9,
     quant: 0,
     size: ["P"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "queridinhos"],
     image: ["media/roupas/bdVerde.jpg"],
     description:
       "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
@@ -236,7 +236,7 @@ const products = [
     price: 39.9,
     quant: 0,
     size: ["G"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "queridinhos"],
     image: ["media/roupas/bdPreto.jpg"],
     description:
       "🧣 Canelado, duplo tecido no busto, 92% poliester, 8% elastano.",
@@ -260,7 +260,7 @@ const products = [
     price: 26.9,
     quant: 0,
     size: ["M"],
-    categories: ["bodyCropped"],
+    categories: ["bodyCropped", "queridinhos"],
     image: ["media/roupas/cpReg.jpg"],
     description: "🧣 Confeccionado em canelado macio, básico.",
     descSize:
@@ -273,11 +273,7 @@ const products = [
     quant: 0,
     size: ["P"],
     categories: ["vestido"],
-    image: [
-      "media/roupas/vtCurto3.jpg",
-      "media/roupas/vtCurto1.jpg",
-      "media/roupas/vtCurto2.jpg",
-    ],
+    image: ["media/roupas/vtCurto3.jpg", "media/roupas/vtCurto2.jpg"],
     description:
       "🧣 Confeccionado em suplex, curto, com fenda lateral na coxa. Sem bojo",
     descSize: "📐 Cintura: 63cm, Busto: 57cm, Comprimento: 74cm",
@@ -288,7 +284,7 @@ const products = [
     price: 79.9,
     quant: 0,
     size: ["P"],
-    categories: ["calcaSaia"],
+    categories: ["calcaSaia", "queridinhos"],
     image: ["media/roupas/calcaBege1.jpg", "media/roupas/calcaBege2.jpg"],
     description:
       "🧣 Tecido crepe, 90% poliéster, 10% elastano. Possui elástico atrás.",
@@ -310,16 +306,26 @@ const products = [
 ];
 
 /* Novidades */
+const novidades = products.filter((product) =>
+  product.categories.includes("novidades")
+);
+
+/* Queridinhos */
+const queridinhos = products.filter((product) =>
+  product.categories.includes("queridinhos")
+);
+
+/* Body / Cropped */
 const bodyCropped = products.filter((product) =>
   product.categories.includes("bodyCropped")
 );
 
-/* Lançamentos */
+/* Calça / Saia */
 const calcaSaia = products.filter((product) =>
   product.categories.includes("calcaSaia")
 );
 
-/* Promoções */
+/* Vestidos */
 const vestido = products.filter((product) =>
   product.categories.includes("vestido")
 );
@@ -526,6 +532,30 @@ function App() {
                 showAlert={showAlert}
                 handleClickOpen={handleClickOpen}
                 title="Vestidos"
+              />
+            }
+          ></Route>
+          <Route
+            path="/novidades"
+            element={
+              <Product
+                products={novidades}
+                addItem={addItem}
+                showAlert={showAlert}
+                handleClickOpen={handleClickOpen}
+                title="Novidades"
+              />
+            }
+          ></Route>
+          <Route
+            path="/queridinhos"
+            element={
+              <Product
+                products={queridinhos}
+                addItem={addItem}
+                showAlert={showAlert}
+                handleClickOpen={handleClickOpen}
+                title="Queridinhos"
               />
             }
           ></Route>
