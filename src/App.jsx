@@ -85,7 +85,7 @@ const products = [
     name: "Cropped Cavado Preto",
     price: 22.9,
     quant: 1,
-    size: ["M"],
+    size: ["P"],
     categories: ["bodyCropped"],
     image: ["media/roupas/cavadoPreto1.jpg", "media/roupas/cavadoPreto2.jpg"],
     description:
